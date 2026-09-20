@@ -87,6 +87,20 @@
 			}
 		}
 	],
+	"emberAccount": {
+		"url": "https://kzzdvhseysyktnycemev.supabase.co",
+		"anonKey": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Imt6emR2aHNleXN5a3RueWNlbWV2Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODk5MjU3NjAsImV4cCI6MjEwNTUwMTc2MH0.h8rNUhhlqAK0mo3prb24vhddumoTTkAkFJ448Xwj0qo",
+		"providers": [
+			{
+				"id": "github",
+				"label": "GitHub"
+			},
+			{
+				"id": "google",
+				"label": "Google"
+			}
+		]
+	},
 	"defaultChatAgent": {
 		"extensionId": "GitHub.copilot",
 		"chatExtensionId": "GitHub.copilot-chat",

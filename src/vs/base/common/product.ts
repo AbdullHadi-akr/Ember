@@ -273,6 +273,8 @@ export interface IProductConfiguration {
 	readonly commonlyUsedSettings?: string[];
 	readonly aiGeneratedWorkspaceTrust?: IAiGeneratedWorkspaceTrust;
 
+	readonly emberAccount?: IEmberAccountConfiguration;
+
 	readonly defaultChatAgent: IDefaultChatAgent;
 	readonly chatParticipantRegistry?: string;
 	readonly chatSessionRecommendations?: IChatSessionRecommendation[];
@@ -420,6 +422,31 @@ export interface IAiGeneratedWorkspaceTrust {
 	readonly trustOption: string;
 	readonly dontTrustOption: string;
 	readonly startupTrustRequestLearnMore: string;
+}
+
+/**
+ * Ember's own account backend (Supabase). Absent in builds that ship without
+ * accounts — consumers must treat the whole block as optional and stay signed
+ * out rather than failing, so a fork can be built without a project configured.
+ */
+export interface IEmberAccountConfiguration {
+	/** Supabase project URL, e.g. `https://<ref>.supabase.co`. No trailing slash. */
+	readonly url: string;
+	/**
+	 * The anon (publishable) key. This is designed to ship in clients and is
+	 * protected by row-level security; it is NOT the `service_role` key, which
+	 * must never reach the client.
+	 */
+	readonly anonKey: string;
+	/** OAuth providers offered on the sign-in gate, in display order. */
+	readonly providers: readonly IEmberAccountProvider[];
+}
+
+export interface IEmberAccountProvider {
+	/** Supabase provider id, e.g. `github`, `google`. */
+	readonly id: string;
+	/** Label shown on the sign-in button. */
+	readonly label: string;
 }
 
 export interface IDefaultChatAgent {

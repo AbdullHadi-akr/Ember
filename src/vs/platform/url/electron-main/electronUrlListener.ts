@@ -51,8 +51,21 @@ export class ElectronURLListener extends Disposable {
 		// Windows: install as protocol handler
 		// Skip in portable mode: the registered command wouldn't preserve
 		// portable mode settings, causing issues with OAuth flows.
-		if (isWindows && !environmentMainService.isPortable) {
-			const windowsParameters = environmentMainService.isBuilt ? [] : [`"${environmentMainService.appRoot}"`];
+		// A process that the OS started *to handle a URL* must not rewrite the
+		// registration it was just launched from. Such a launch carries no
+		// `VSCODE_DEV`, so a source build reports `isBuilt` there and would
+		// re-register the built-style command — dropping the app-root argument
+		// that a source build needs, and breaking every later protocol launch.
+		const launchedToHandleUrl = !!environmentMainService.args['open-url'];
+
+		if (isWindows && !environmentMainService.isPortable && !launchedToHandleUrl) {
+			// `setAsDefaultProtocolClient` quotes each parameter itself when it
+			// writes the registry command. Quoting the app root here as well put
+			// literal quotes *inside* the argument, so the source build received
+			// `"c:\...\repo"` rather than a path, treated it as relative, and
+			// resolved it against the protocol launcher's working directory
+			// (C:\Windows\System32) — "Unable to find Electron app at ...".
+			const windowsParameters = environmentMainService.isBuilt ? [] : [environmentMainService.appRoot];
 			windowsParameters.push('--open-url', '--');
 			app.setAsDefaultProtocolClient(productService.urlProtocol, process.execPath, windowsParameters);
 		}

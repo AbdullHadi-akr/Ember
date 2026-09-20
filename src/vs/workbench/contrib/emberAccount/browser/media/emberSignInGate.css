@@ -1,0 +1,82 @@
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+/* The gate covers the whole window: nothing behind it is reachable until an
+   account is signed in, so it is opaque rather than a translucent scrim. */
+.ember-signin-gate {
+	position: fixed;
+	inset: 0;
+	z-index: 10001;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: var(--vscode-editor-background);
+	color: var(--vscode-foreground);
+	font-size: var(--vscode-fontSize-body1);
+}
+
+.ember-signin-card {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	gap: var(--vscode-spacing-size120);
+	width: 100%;
+	max-width: 360px;
+	padding: var(--vscode-spacing-size400) var(--vscode-spacing-size320);
+	border: var(--vscode-strokeThickness) solid var(--vscode-widget-border);
+	border-radius: var(--vscode-cornerRadius-xLarge);
+	background: var(--vscode-editorWidget-background);
+}
+
+.ember-signin-mark {
+	width: 72px;
+	height: 72px;
+	background-image: url('./ember-mark.svg');
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+.ember-signin-title {
+	margin: 0;
+	font-size: var(--vscode-fontSize-heading2);
+	font-weight: var(--vscode-fontWeight-semiBold);
+}
+
+.ember-signin-subtitle {
+	margin: 0;
+	color: var(--vscode-descriptionForeground);
+	line-height: 1.5;
+}
+
+.ember-signin-actions {
+	display: flex;
+	flex-direction: column;
+	gap: var(--vscode-spacing-size80);
+	width: 100%;
+	margin-top: var(--vscode-spacing-size40);
+}
+
+.ember-signin-status {
+	color: var(--vscode-descriptionForeground);
+	font-size: var(--vscode-fontSize-body2);
+}
+
+.ember-signin-error {
+	width: 100%;
+	padding: var(--vscode-spacing-size80) var(--vscode-spacing-size120);
+	border: var(--vscode-strokeThickness) solid var(--vscode-inputValidation-errorBorder);
+	border-radius: var(--vscode-cornerRadius-small);
+	background: var(--vscode-inputValidation-errorBackground);
+	color: var(--vscode-inputValidation-errorForeground);
+	font-size: var(--vscode-fontSize-body2);
+	text-align: left;
+}
+
+.ember-signin-hint {
+	color: var(--vscode-descriptionForeground);
+	font-size: var(--vscode-fontSize-body2);
+}
