@@ -111,8 +111,8 @@
 	border-right-width: 0;
 	border-top-right-radius: 0;
 	border-bottom-right-radius: 0;
-	border-top-left-radius: 8px;
-	border-bottom-left-radius: 8px;
+	border-top-left-radius: var(--vscode-cornerRadius-large);
+	border-bottom-left-radius: var(--vscode-cornerRadius-large);
 	box-sizing: border-box;
 	overflow: hidden;
 }
@@ -123,8 +123,8 @@
 
 .agent-sessions-workbench.noauxiliarybar .monaco-grid-view .part.editor:not(.modal-editor-part) {
 	border-right-width: var(--vscode-strokeThickness);
-	border-top-right-radius: 8px;
-	border-bottom-right-radius: 8px;
+	border-top-right-radius: var(--vscode-cornerRadius-large);
+	border-bottom-right-radius: var(--vscode-cornerRadius-large);
 }
 
 /* Floating content card. Shared by every full-surface content part (the
@@ -148,15 +148,15 @@
 	border: 1px solid var(--part-border-color, transparent);
 	border-top-left-radius: 0;
 	border-bottom-left-radius: 0;
-	border-top-right-radius: 8px;
-	border-bottom-right-radius: 8px;
+	border-top-right-radius: var(--vscode-cornerRadius-large);
+	border-bottom-right-radius: var(--vscode-cornerRadius-large);
 	box-sizing: border-box;
 }
 
 .agent-sessions-workbench:not(.dock-detail-panel).nomaineditorarea .part.auxiliarybar {
 	padding-left: 0;
-	border-top-left-radius: 8px;
-	border-bottom-left-radius: 8px;
+	border-top-left-radius: var(--vscode-cornerRadius-large);
+	border-bottom-left-radius: var(--vscode-cornerRadius-large);
 }
 
 .agent-sessions-workbench .part.auxiliarybar > .content .pane-body {
@@ -263,8 +263,8 @@
 	overflow: hidden;
 	background: var(--vscode-editor-background);
 	border-right-width: var(--vscode-strokeThickness);
-	border-top-right-radius: 8px;
-	border-bottom-right-radius: 8px;
+	border-top-right-radius: var(--vscode-cornerRadius-large);
+	border-bottom-right-radius: var(--vscode-cornerRadius-large);
 }
 
 .agent-sessions-workbench.dock-detail-panel .part.auxiliarybar {

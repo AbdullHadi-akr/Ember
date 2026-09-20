@@ -108,7 +108,7 @@
 .monaco-workbench .monaco-list-row .expression .lazy-button {
 	margin-left: 3px;
 	display: none;
-	border-radius: 5px;
+	border-radius: var(--vscode-cornerRadius-medium);
 	align-self: center;
 }
 

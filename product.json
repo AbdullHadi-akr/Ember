@@ -205,9 +205,9 @@
 	],
 	"onboardingThemes": [
 		{
-			"id": "dark-2026",
-			"label": "Dark 2026",
-			"themeId": "Dark 2026",
+			"id": "ember-dark",
+			"label": "Ember Dark",
+			"themeId": "Ember Dark",
 			"type": "dark"
 		},
 		{

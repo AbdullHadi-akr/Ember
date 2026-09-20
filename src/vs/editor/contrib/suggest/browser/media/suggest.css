@@ -473,7 +473,7 @@
 }
 
 .monaco-editor .suggest-details code {
-	border-radius: 3px;
+	border-radius: var(--vscode-cornerRadius-small);
 	padding: 0 0.4em;
 }
 

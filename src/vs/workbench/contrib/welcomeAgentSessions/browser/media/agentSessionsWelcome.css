@@ -70,7 +70,7 @@
 	padding: 4px 8px;
 	padding-left: 0;
 	border: none;
-	border-radius: 4px;
+	border-radius: var(--vscode-cornerRadius-small);
 	background-color: transparent;
 	color: var(--vscode-descriptionForeground);
 	font-size: 13px;
@@ -131,7 +131,7 @@
 .agentSessionsWelcome-suggestedPrompt {
 	padding: 8px 16px;
 	border: 1px solid var(--vscode-button-border, var(--vscode-contrastBorder, transparent));
-	border-radius: 20px;
+	border-radius: var(--vscode-cornerRadius-xLarge);
 	background-color: var(--vscode-button-secondaryBackground);
 	color: var(--vscode-button-secondaryForeground);
 	font-size: 13px;
@@ -209,7 +209,7 @@
 
 /* Style individual session items in the welcome page */
 .agentSessionsWelcome-sessionsGrid .agent-session-item {
-	border-radius: 4px;
+	border-radius: var(--vscode-cornerRadius-small);
 }
 
 .agentSessionsWelcome-sessionsGrid .agent-session-item:hover {
@@ -236,13 +236,13 @@
 	align-items: center;
 	padding: 6px 10px;
 	border: none;
-	border-radius: 6px;
+	border-radius: var(--vscode-cornerRadius-medium);
 	background-color: var(--vscode-toolbar-hoverBackground);
 	color: var(--vscode-foreground);
 	font-size: 13px;
 	cursor: pointer;
 	font-family: inherit;
-	border-radius: 50px;
+	border-radius: var(--vscode-cornerRadius-circle);
 	width: 100%;
 	justify-content: center;
 }
@@ -277,7 +277,7 @@
 	align-items: center;
 	padding: 15px;
 	border: 1px solid var(--vscode-welcomePage-tileBorder, var(--vscode-contrastBorder, transparent));
-	border-radius: 8px;
+	border-radius: var(--vscode-cornerRadius-large);
 	background-color: transparent;
 	cursor: pointer;
 	transition: background-color 0.1s;
@@ -334,7 +334,7 @@
 	align-items: center;
 	justify-content: center;
 	border: none;
-	border-radius: 4px;
+	border-radius: var(--vscode-cornerRadius-small);
 	background-color: transparent;
 	color: var(--vscode-descriptionForeground);
 	cursor: pointer;
@@ -366,7 +366,7 @@
 	gap: 8px;
 	padding: 8px 16px;
 	border: none;
-	border-radius: 4px;
+	border-radius: var(--vscode-cornerRadius-small);
 	background-color: transparent;
 	color: var(--vscode-foreground);
 	font-size: 13px;
@@ -399,7 +399,7 @@
 	float: none;
 	margin-left: 0;
 	border: 1px solid var(--vscode-checkbox-border) !important;
-	border-radius: 3px;
+	border-radius: var(--vscode-cornerRadius-small);
 	padding: 0;
 	background-color: var(--vscode-checkbox-background) !important;
 	color: var(--vscode-checkbox-foreground) !important;
@@ -426,7 +426,7 @@
 	box-sizing: border-box;
 	cursor: default;
 	border: 1px solid var(--vscode-welcomePage-tileBorder, var(--vscode-contrastBorder, transparent));
-	border-radius: 8px;
+	border-radius: var(--vscode-cornerRadius-large);
 	background-color: transparent;
 }
 
@@ -477,7 +477,7 @@
 	width: 22px;
 	height: 22px;
 	border: none;
-	border-radius: 4px;
+	border-radius: var(--vscode-cornerRadius-small);
 	background-color: transparent;
 	color: var(--vscode-descriptionForeground);
 	cursor: pointer;
@@ -517,7 +517,7 @@
 	align-items: center;
 	gap: 12px;
 	padding: 8px 12px 8px 8px;
-	border-radius: 4px;
+	border-radius: var(--vscode-cornerRadius-small);
 	height: 44px;
 	box-sizing: border-box;
 }
@@ -525,7 +525,7 @@
 .agentSessionsWelcome-sessionSkeleton-icon {
 	width: 20px;
 	height: 20px;
-	border-radius: 4px;
+	border-radius: var(--vscode-cornerRadius-small);
 	background: var(--vscode-welcomePage-tileBorder, var(--vscode-contrastBorder, rgba(128, 128, 128, 0.2)));
 	animation: agentSessionsWelcome-shimmer 1.5s ease-in-out infinite;
 }
@@ -539,7 +539,7 @@
 
 .agentSessionsWelcome-sessionSkeleton-title {
 	height: 12px;
-	border-radius: 2px;
+	border-radius: var(--vscode-cornerRadius-xSmall);
 	background: var(--vscode-welcomePage-tileBorder, var(--vscode-contrastBorder, rgba(128, 128, 128, 0.2)));
 	animation: agentSessionsWelcome-shimmer 1.5s ease-in-out infinite;
 	animation-delay: 0.1s;
@@ -548,7 +548,7 @@
 .agentSessionsWelcome-sessionSkeleton-description {
 	height: 10px;
 	width: 60%;
-	border-radius: 2px;
+	border-radius: var(--vscode-cornerRadius-xSmall);
 	background: var(--vscode-welcomePage-tileBorder, var(--vscode-contrastBorder, rgba(128, 128, 128, 0.2)));
 	animation: agentSessionsWelcome-shimmer 1.5s ease-in-out infinite;
 	animation-delay: 0.2s;

@@ -356,7 +356,7 @@
 	gap: 2px;
 	padding: 1px 2px;
 	border: var(--vscode-strokeThickness) solid var(--vscode-widget-border, var(--vscode-menu-separatorBackground));
-	border-radius: 14px;
+	border-radius: var(--vscode-cornerRadius-circle);
 }
 
 .agent-sessions-workbench .sessions-account-titlebar-panel-provider-actions .action-item {

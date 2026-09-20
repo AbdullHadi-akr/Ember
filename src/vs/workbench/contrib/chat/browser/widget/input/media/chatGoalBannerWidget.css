@@ -58,7 +58,7 @@
 	border: none;
 	background: transparent;
 	color: var(--vscode-icon-foreground);
-	border-radius: 3px;
+	border-radius: var(--vscode-cornerRadius-small);
 	cursor: pointer;
 }
 

@@ -15,7 +15,7 @@
 
 .interactive-editor .input-cell-container .input-focus-indicator::before {
 	border-left: 3px solid transparent;
-	border-radius: 2px;
+	border-radius: var(--vscode-cornerRadius-xSmall);
 	margin-left: 4px;
 	content: "";
 	position: absolute;

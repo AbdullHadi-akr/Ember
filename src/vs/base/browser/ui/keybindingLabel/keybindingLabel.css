@@ -14,7 +14,7 @@
 	align-items: center;
 	border-style: solid;
 	border-width: 1px;
-	border-radius: 3px;
+	border-radius: var(--vscode-cornerRadius-small);
 	justify-content: center;
 	min-width: 12px;
 	font-size: 11px;

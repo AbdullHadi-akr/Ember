@@ -19,7 +19,7 @@
 	padding: 0px;
 	color: var(--vscode-button-foreground);
 	background-color: var(--vscode-button-background);
-	border-radius: 5px;
+	border-radius: var(--vscode-cornerRadius-medium);
 	border: 1px solid var(--vscode-contrastBorder);
 	display: flex;
 	align-items: center;

@@ -5,7 +5,7 @@
 
 .chat-pull-request-content-part {
 	border: 1px solid var(--vscode-chat-requestBorder);
-	border-radius: 6px;
+	border-radius: var(--vscode-cornerRadius-medium);
 	margin: 4px 0;
 	overflow: hidden;
 }

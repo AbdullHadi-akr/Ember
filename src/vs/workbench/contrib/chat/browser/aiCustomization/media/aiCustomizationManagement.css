@@ -60,7 +60,7 @@
 	gap: 10px;
 	padding: 5px 8px;
 	border: none;
-	border-radius: 4px;
+	border-radius: var(--vscode-cornerRadius-small);
 	background: transparent;
 	color: var(--vscode-foreground);
 	cursor: pointer;
@@ -181,7 +181,7 @@
 	padding: 4px 8px;
 	gap: 10px;
 	cursor: pointer;
-	border-radius: 4px;
+	border-radius: var(--vscode-cornerRadius-small);
 	transition: background-color 0.1s ease, opacity 0.1s ease;
 }
 
@@ -223,7 +223,7 @@
 	font-size: var(--vscode-fontSize-label2);
 	font-weight: var(--vscode-fontWeight-semiBold);
 	color: var(--vscode-descriptionForeground);
-	border-radius: 8px;
+	border-radius: var(--vscode-cornerRadius-large);
 	min-width: 14px;
 	text-align: right;
 	line-height: 16px;
@@ -251,7 +251,7 @@
 	padding-block: var(--vscode-spacing-size400) var(--vscode-spacing-size160);
 	background: var(--vscode-agentsPanel-background);
 	border: 1px solid var(--vscode-agentsPanel-border);
-	border-radius: 6px;
+	border-radius: var(--vscode-cornerRadius-medium);
 	box-sizing: border-box;
 }
 
@@ -281,7 +281,7 @@
 	height: 26px;
 	padding: 0;
 	border: none;
-	border-radius: 4px;
+	border-radius: var(--vscode-cornerRadius-small);
 	background: transparent;
 	color: var(--vscode-foreground);
 	cursor: pointer;
@@ -512,7 +512,7 @@
 	cursor: pointer;
 	-webkit-user-select: none;
 	user-select: none;
-	border-radius: 4px;
+	border-radius: var(--vscode-cornerRadius-small);
 }
 
 /* Spacing above non-first group headers */
@@ -595,7 +595,7 @@ per-word capitalization does not survive translation. */
 	align-items: center;
 	padding: 6px 12px 6px 16px;
 	cursor: pointer;
-	border-radius: 4px;
+	border-radius: var(--vscode-cornerRadius-small);
 	min-height: 32px;
 }
 
@@ -639,7 +639,7 @@ per-word capitalization does not survive translation. */
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	border-radius: 3px;
+	border-radius: var(--vscode-cornerRadius-small);
 	margin-right: 4px;
 	opacity: 1;
 }
@@ -654,7 +654,7 @@ per-word capitalization does not survive translation. */
 	flex-shrink: 0;
 	font-size: var(--vscode-fontSize-label3);
 	padding: 0 4px;
-	border-radius: 3px;
+	border-radius: var(--vscode-cornerRadius-small);
 	color: var(--vscode-descriptionForeground);
 	background: var(--vscode-toolbar-hoverBackground, rgba(90, 93, 94, 0.31));
 	white-space: nowrap;
@@ -875,7 +875,7 @@ per-word capitalization does not survive translation. */
 	padding: 10px 12px;
 	background-color: var(--vscode-sideBar-background);
 	border: 1px solid var(--vscode-widget-border);
-	border-radius: 6px;
+	border-radius: var(--vscode-cornerRadius-medium);
 	cursor: pointer;
 	transition: background-color 0.1s ease;
 	flex: 1 1 120px;
@@ -922,7 +922,7 @@ per-word capitalization does not survive translation. */
 	padding: 1px 5px;
 	background-color: var(--vscode-list-inactiveSelectionBackground);
 	color: var(--vscode-list-inactiveSelectionForeground, var(--vscode-foreground));
-	border-radius: 8px;
+	border-radius: var(--vscode-cornerRadius-large);
 	min-width: 14px;
 	text-align: center;
 }
@@ -941,7 +941,7 @@ per-word capitalization does not survive translation. */
 	padding-inline: var(--vscode-spacing-size400);
 	background: var(--vscode-agentsPanel-background);
 	border: 1px solid var(--vscode-agentsPanel-border);
-	border-radius: 6px;
+	border-radius: var(--vscode-cornerRadius-medium);
 	overflow: hidden;
 	box-sizing: border-box;
 }
@@ -1413,7 +1413,7 @@ per-word capitalization does not survive translation. */
 	gap: 8px;
 	padding: 8px 12px;
 	box-sizing: border-box;
-	border-radius: 4px;
+	border-radius: var(--vscode-cornerRadius-small);
 	cursor: default;
 }
 
@@ -3305,7 +3305,7 @@ per-word capitalization does not survive translation. */
 	padding: 0;
 	background: var(--vscode-agentsPanel-background);
 	border: 1px solid var(--vscode-agentsPanel-border);
-	border-radius: 6px;
+	border-radius: var(--vscode-cornerRadius-medium);
 	overflow: hidden;
 	box-sizing: border-box;
 }
@@ -3581,7 +3581,7 @@ per-word capitalization does not survive translation. */
 	flex-shrink: 0;
 	height: 26px;
 	padding: 0 10px;
-	border-radius: 4px;
+	border-radius: var(--vscode-cornerRadius-small);
 	border: 1px solid var(--vscode-widget-border);
 	background: var(--vscode-button-secondaryBackground);
 	color: var(--vscode-button-secondaryForeground);
@@ -3643,7 +3643,7 @@ per-word capitalization does not survive translation. */
 	padding: 10px 12px;
 	background: var(--vscode-editorWidget-background);
 	border: 1px solid var(--vscode-widget-border);
-	border-radius: 6px;
+	border-radius: var(--vscode-cornerRadius-medium);
 }
 
 .ai-customization-management-editor .editor-preview-row-header {
@@ -3667,7 +3667,7 @@ per-word capitalization does not survive translation. */
 	height: 20px;
 	padding: 0;
 	border: none;
-	border-radius: 999px;
+	border-radius: var(--vscode-cornerRadius-circle);
 	background: transparent;
 	color: var(--vscode-descriptionForeground);
 	cursor: pointer;
@@ -3705,7 +3705,7 @@ per-word capitalization does not survive translation. */
 	padding: 12px 14px;
 	background: var(--vscode-editorWidget-background);
 	border: 1px solid var(--vscode-widget-border);
-	border-radius: 6px;
+	border-radius: var(--vscode-cornerRadius-medium);
 }
 
 .ai-customization-management-editor .editor-preview-body-content > :first-child {
@@ -3720,7 +3720,7 @@ per-word capitalization does not survive translation. */
 	padding: 12px 14px;
 	background: var(--vscode-editorWidget-background);
 	border: 1px dashed var(--vscode-widget-border);
-	border-radius: 6px;
+	border-radius: var(--vscode-cornerRadius-medium);
 	color: var(--vscode-descriptionForeground);
 	font-size: 12px;
 }
@@ -3729,7 +3729,7 @@ per-word capitalization does not survive translation. */
 	padding: 12px 14px;
 	background: var(--vscode-inputValidation-warningBackground);
 	border: 1px solid var(--vscode-inputValidation-warningBorder);
-	border-radius: 6px;
+	border-radius: var(--vscode-cornerRadius-medium);
 	color: var(--vscode-inputValidation-warningForeground);
 	display: flex;
 	flex-direction: column;
@@ -3753,7 +3753,7 @@ per-word capitalization does not survive translation. */
 }
 
 .ai-customization-management-editor .embedded-editor-container .monaco-editor {
-	border-radius: 4px;
+	border-radius: var(--vscode-cornerRadius-small);
 }
 
 /* Initial open transition: a subtle fade + lift plays once when the editor

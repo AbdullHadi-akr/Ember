@@ -251,7 +251,7 @@
 .models-widget .models-table-container .monaco-table-td .model-capability {
 	width: fit-content;
 	padding: 0 6px;
-	border-radius: 3px;
+	border-radius: var(--vscode-cornerRadius-small);
 	font-size: 11px;
 	color: var(--vscode-radio-inactiveForeground);
 	background-color: var(--vscode-radio-inactiveBackground);

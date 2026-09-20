@@ -44,14 +44,16 @@ Use for `padding`, `margin`, `gap`, and fixed `width`/`height` of spacers. The n
 
 | px | Variable | Use |
 |----|----------|-----|
-| 2  | `--vscode-cornerRadius-xSmall` | very compact elements |
-| 4  | `--vscode-cornerRadius-small` | controls (buttons, inputs) |
-| 6  | `--vscode-cornerRadius-medium` | base / inner surfaces |
-| 8  | `--vscode-cornerRadius-large` | prominent / outer surfaces |
-| 12 | `--vscode-cornerRadius-xLarge` | very prominent surfaces |
+| 3  | `--vscode-cornerRadius-xSmall` | very compact elements |
+| 6  | `--vscode-cornerRadius-small` | controls (buttons, inputs) |
+| 10 | `--vscode-cornerRadius-medium` | base / inner surfaces |
+| 14 | `--vscode-cornerRadius-large` | prominent / outer surfaces |
+| 20 | `--vscode-cornerRadius-xLarge` | very prominent surfaces |
 | 9999 | `--vscode-cornerRadius-circle` | fully rounded (pills, dots) |
 
-**Snap map** for off-scale literals (ties round **up**): `2→xSmall`, `3,4→small`, `5,6→medium`, `7,8→large`, `10,11,12→xLarge`, `14,16,18,20→xLarge`, `999→circle`.
+> Ember runs a **rounder ramp** than upstream VS Code (which used 2/4/6/8/12). Always reference the token, never the px value — the ramp is tuned centrally in [baseSizes.ts](../../src/vs/platform/theme/common/sizes/baseSizes.ts) and these numbers move.
+
+**Snap map** — use it to migrate a legacy literal onto the tier it *meant*, not onto an equal pixel value: `2→xSmall`, `3,4→small`, `5,6→medium`, `7,8→large`, `10,11,12→xLarge`, `16,20,24→xLarge`, `999→circle`.
 
 - **Pills** (radius ≈ half the element height, e.g. `28h`/`14r`, `36h`/`18r`, `22×22`/`11r`) → `--vscode-cornerRadius-circle`, **not** xLarge. The literal-nearest token would square them and lose the fully-rounded intent.
 - **Leave untouched:** `50%`, `0`, `0px`, `inherit`, and any `calc()`/`var()` expression. Preserve `!important`.

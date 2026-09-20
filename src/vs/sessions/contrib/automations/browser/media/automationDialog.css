@@ -608,7 +608,7 @@
 	color: var(--vscode-settings-textInputForeground, var(--vscode-input-foreground));
 	background-color: var(--vscode-settings-textInputBackground, var(--vscode-input-background));
 	border: 1px solid var(--vscode-settings-textInputBorder, var(--vscode-input-border, var(--vscode-contrastBorder, transparent)));
-	border-radius: 2px;
+	border-radius: var(--vscode-cornerRadius-xSmall);
 	padding: 4px 6px;
 	box-sizing: border-box;
 	width: 100%;

@@ -90,7 +90,7 @@
 	overflow: hidden;
 	line-height: 1;
 	vertical-align: middle;
-	border-radius: 3px;
+	border-radius: var(--vscode-cornerRadius-small);
 	border-style: none;
 }
 
@@ -99,7 +99,7 @@
 	width: 30px;
 	background-color: transparent;
 	border: 1px solid grey;
-	border-radius: 3px;
+	border-radius: var(--vscode-cornerRadius-small);
 }
 
 .review-widget .body .review-comment .review-comment-contents {
@@ -387,7 +387,7 @@
 	width: 100%;
 	min-height: 90px;
 	max-height: 500px;
-	border-radius: 3px;
+	border-radius: var(--vscode-cornerRadius-small);
 	border: 0px;
 	box-sizing: content-box;
 	padding: 6px 0 6px 12px;
@@ -579,7 +579,7 @@ div.preview.inline .monaco-editor .comment-range-glyph {
 	content: var(--vscode-icon-plus-content);
 	font-family: var(--vscode-icon-plus-font-family);
 	font-family: "codicon";
-	border-radius: 3px;
+	border-radius: var(--vscode-cornerRadius-small);
 	width: 18px !important;
 	margin-left: -5px;
 	padding-left: 1px;
@@ -598,7 +598,7 @@ div.preview.inline .monaco-editor .comment-range-glyph {
 	font-size: 13px;
 	width: 18px !important;
 	line-height: 100%;
-	border-radius: 3px;
+	border-radius: var(--vscode-cornerRadius-small);
 	z-index: 20;
 	margin-left: -5px;
 	padding-top: 1px;

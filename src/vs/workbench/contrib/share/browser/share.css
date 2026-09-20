@@ -6,7 +6,7 @@
 div.share-dialog-input-text,
 div.share-dialog-input-link {
 	border: 1px solid var(--vscode-input-border, transparent);
-	border-radius: 2px;
+	border-radius: var(--vscode-cornerRadius-xSmall);
 	color: var(--vscode-input-foreground);
 	background-color: var(--vscode-input-background);
 	padding: 2px;

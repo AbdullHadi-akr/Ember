@@ -204,7 +204,7 @@
 .monaco-workbench .pane-composite-part > .title > .composite-bar-container > .composite-bar > .monaco-action-bar .badge .badge-content,
 .monaco-workbench .pane-composite-part > .header-or-footer > .composite-bar-container > .composite-bar > .monaco-action-bar .badge .badge-content {
 	padding: 3px 5px;
-	border-radius: 10px;
+	border-radius: var(--vscode-cornerRadius-xLarge);
 	font-size: 10px;
 	min-width: 16px;
 	height: 16px;
@@ -244,7 +244,7 @@
 	height: 13px;
 	line-height: 13px;
 	padding: 0 2px;
-	border-radius: 16px;
+	border-radius: var(--vscode-cornerRadius-xLarge);
 	text-align: center;
 }
 

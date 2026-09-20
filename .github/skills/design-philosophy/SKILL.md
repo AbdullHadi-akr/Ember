@@ -143,12 +143,12 @@ Equivalent elements must look equivalent, because they pull from the same named 
 *Carried out by:* every move below - they *are* the shared scales. See especially [design tokens](#design-tokens), [the spacing ramp](#spacing-ramp), [the type ramp](#type-ramp), [icon sizes](#icon-sizes), [one stroke](#one-stroke).
 
 > **Worked example - two mismatched dialogs**
-> - **See:** two dialogs open side by side; one has 8px corners, the other 6px -
+> - **See:** two dialogs open side by side; one has 14px corners, the other 10px -
 >   both are floating overlays.
 > - **Feeling:** not *Consistent* - the UI feels like it's drifting.
 > - **Principle:** breaks *Sameness signals sameness* (two equivalent surfaces look
 >   different for no reason) and *Elevation is encoded* (an overlay belongs on the Outer tier).
-> - **Move:** point both at the Outer radius token; the 6px was a literal someone
+> - **Move:** point both at the Outer radius token; the 10px was a literal someone
 >   typed instead of naming the tier.
 
 ### Delightful
@@ -197,9 +197,11 @@ Corner radius encodes **how far a surface floats above the one beneath it**. Eve
 
 | Tier | Radius | Token | What it is |
 |------|--------|-------|------------|
-| **Control** | 4px | `--vscode-cornerRadius-small` | interactible elements - buttons, inputs, list rows, tabs |
-| **Inner** | 6px | `--vscode-cornerRadius-medium` | non-control containers sitting *inside* a surface |
-| **Outer** | 8px | `--vscode-cornerRadius-large` | floating / overlay surfaces - menus, hovers, dialogs, toasts |
+| **Control** | 6px | `--vscode-cornerRadius-small` | interactible elements - buttons, inputs, list rows, tabs |
+| **Inner** | 10px | `--vscode-cornerRadius-medium` | non-control containers sitting *inside* a surface |
+| **Outer** | 14px | `--vscode-cornerRadius-large` | floating / overlay surfaces - menus, hovers, dialogs, toasts |
+
+> The radii themselves are an Ember choice - a deliberately rounder ramp than upstream VS Code's 4/6/8. What matters and does *not* change is the **ordering**: an overlay is always rounder than an inner container, which is always rounder than a control. Tune the ramp in one place ([baseSizes.ts](../../../src/vs/platform/theme/common/sizes/baseSizes.ts)); never a literal at the call site.
 
 Pills (radius ≈ half the height) are **fully round** (`--vscode-cornerRadius-circle`), not "a big radius."
 - **Decision rule:** pick the tier by the surface's **role in the stack**, not by how the corner looks. A bug here sounds like *"this overlay is rounded at the control tier,"* never *"this needs more border-radius."*

@@ -219,7 +219,7 @@
 .scm-view .monaco-list-row .history-item > .label-container > .label {
 	display: flex;
 	align-items: center;
-	border-radius: 10px;
+	border-radius: var(--vscode-cornerRadius-xLarge);
 	line-height: 18px;
 }
 
@@ -255,7 +255,7 @@
 .scm-view .monaco-list-row .history-item .monaco-icon-label .avatar {
 	width: 14px;
 	height: 14px;
-	border-radius: 14px;
+	border-radius: var(--vscode-cornerRadius-circle);
 }
 
 .scm-view .monaco-list-row .history-item .monaco-icon-label.history-item-current .label-name {
@@ -392,11 +392,11 @@
 }
 
 .scm-view .scm-editor-container .monaco-editor {
-	border-radius: 4px;
+	border-radius: var(--vscode-cornerRadius-small);
 }
 
 .scm-view .scm-editor-container .monaco-editor .overflow-guard {
-	border-radius: 4px;
+	border-radius: var(--vscode-cornerRadius-small);
 }
 
 .scm-view .scm-editor {
@@ -407,7 +407,7 @@
 	box-sizing: border-box;
 	border: 1px solid var(--vscode-input-border, transparent);
 	background-color: var(--vscode-input-background);
-	border-radius: 4px;
+	border-radius: var(--vscode-cornerRadius-small);
 }
 
 .scm-view .button-container {
@@ -485,8 +485,8 @@
 	border-width: 1px;
 	border-style: solid;
 	border-top: none;
-	border-bottom-left-radius: 2px;
-	border-bottom-right-radius: 2px;
+	border-bottom-left-radius: var(--vscode-cornerRadius-xSmall);
+	border-bottom-right-radius: var(--vscode-cornerRadius-xSmall);
 	padding: 2px;
 }
 
@@ -748,7 +748,7 @@
 	margin: 0 10px;
 	color: var(--vscode-debugView-stateLabelForeground);
 	background: var(--vscode-debugView-stateLabelBackground);
-	border-radius: 2px;
+	border-radius: var(--vscode-cornerRadius-xSmall);
 }
 
 .scm-history-view .scm-provider .actions {
@@ -808,6 +808,6 @@
 .scm-history-view .history-item-load-more .history-item-placeholder.shimmer .monaco-icon-label-container {
 	height: 18px;
 	background: var(--vscode-scmGraph-historyItemHoverDefaultLabelBackground);
-	border-radius: 2px;
+	border-radius: var(--vscode-cornerRadius-xSmall);
 	opacity: 0.5;
 }

@@ -326,7 +326,7 @@
 
 .monaco-workbench .part.editor > .content .gettingStartedContainer .gettingStartedSlideCategories .getting-started-category {
 	position: relative;
-	border-radius: 6px;
+	border-radius: var(--vscode-cornerRadius-medium);
 	overflow: hidden;
 }
 
@@ -462,7 +462,7 @@
 	display: flex;
 	width: 100%;
 	overflow: hidden;
-	border-radius: 6px;
+	border-radius: var(--vscode-cornerRadius-medium);
 }
 
 .monaco-workbench .part.editor > .content .gettingStartedContainer .gettingStartedSlideDetails .getting-started-step .button-container:not(:last-of-type) {
@@ -543,7 +543,7 @@
 	display: inline-block;
 	border-style: solid;
 	border-width: 1px;
-	border-radius: 2px;
+	border-radius: var(--vscode-cornerRadius-xSmall);
 	vertical-align: top;
 	font-size: 10px;
 	padding: 2px 3px;
@@ -905,7 +905,7 @@
 	height: 18px;
 	width: 18px;
 	border: 1px solid transparent;
-	border-radius: 3px;
+	border-radius: var(--vscode-cornerRadius-small);
 	padding: 0;
 	margin-right: 9px;
 }
@@ -942,7 +942,7 @@
 	display: flex;
 	align-items: center;
 	padding: 6px 12px;
-	border-radius: 50px;
+	border-radius: var(--vscode-cornerRadius-circle);
 	cursor: pointer;
 	font-family: inherit;
 	font-size: 13px;
@@ -994,7 +994,7 @@
 
 .monaco-workbench .part.editor > .content .gettingStartedContainer .hide-category-button {
 	padding: 3px;
-	border-radius: 5px;
+	border-radius: var(--vscode-cornerRadius-medium);
 }
 
 .monaco-workbench .part.editor > .content .gettingStartedContainer .hide-category-button::before {

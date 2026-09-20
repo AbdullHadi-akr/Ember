@@ -35,7 +35,7 @@
 	color: var(--vscode-editorHoverWidget-foreground);
 	background-color: var(--vscode-editorHoverWidget-background);
 	border: 1px solid var(--vscode-inputValidation-infoBorder);
-	border-radius: 3px;
+	border-radius: var(--vscode-cornerRadius-small);
 }
 
 .monaco-editor .monaco-editor-overlaymessage .message p {

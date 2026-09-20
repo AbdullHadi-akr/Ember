@@ -178,7 +178,7 @@
 	cursor: pointer;
 	margin-right: 4px;
 	padding: 2px;
-	border-radius: 5px;
+	border-radius: var(--vscode-cornerRadius-medium);
 }
 
 .profiles-editor .contents-container .profile-body .profile-row-container .profile-icon-container:not(.disabled) .codicon:hover {
@@ -201,7 +201,7 @@
 	cursor: pointer;
 	line-height: 18px;
 	padding: 0px 23px 0px 8px;
-	border-radius: 2px;
+	border-radius: var(--vscode-cornerRadius-xSmall);
 }
 
 .profiles-editor .contents-container .profile-copy-from-container .profile-select-container {

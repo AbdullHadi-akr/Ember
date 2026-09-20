@@ -7,7 +7,7 @@
 	padding: 2px 4px;
 	color: var(--vscode-foreground);
 	background-color: var(--vscode-editorWidget-background);
-	border-radius: 6px;
+	border-radius: var(--vscode-cornerRadius-medium);
 	border: 1px solid var(--vscode-editorWidget-border);
 	display: flex;
 	align-items: center;
@@ -63,7 +63,7 @@
 	padding: 4px 6px;
 	font-size: 11px;
 	line-height: 14px;
-	border-radius: 4px; /* same as overlay widget */
+	border-radius: var(--vscode-cornerRadius-small); /* same as overlay widget */
 }
 
 .chat-editor-overlay-widget .monaco-action-bar .actions-container {

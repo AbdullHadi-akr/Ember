@@ -23,7 +23,7 @@
 	}
 
 	.monaco-list-row {
-		border-radius: 6px;
+		border-radius: var(--vscode-cornerRadius-medium);
 	}
 
 	/* Suppressed while selected so the selection highlight is not overpainted. */
@@ -317,7 +317,7 @@
 			padding: 4px 8px;
 			box-sizing: border-box;
 			border: 1px solid var(--vscode-contrastBorder, var(--vscode-widget-border, transparent));
-			border-radius: 4px;
+			border-radius: var(--vscode-cornerRadius-small);
 			background-color: var(--vscode-editor-background);
 			color: var(--vscode-editor-foreground);
 

@@ -144,8 +144,8 @@
 .merge-accept-gutter-marker.multi-line .background {
 	border: 2px solid var(--vscode-mergeEditor-conflict-unhandledUnfocused-border);
 	border-right: 0;
-	border-top-left-radius: 3px;
-	border-bottom-left-radius: 3px;
+	border-top-left-radius: var(--vscode-cornerRadius-small);
+	border-bottom-left-radius: var(--vscode-cornerRadius-small);
 }
 
 .merge-accept-gutter-marker.multi-line.handled.focused .background {
@@ -188,7 +188,7 @@
 .accept-conflict-group.monaco-custom-toggle {
 	height: 18px;
 	width: 18px;
-	border-radius: 3px;
+	border-radius: var(--vscode-cornerRadius-small);
 	margin-right: 0px;
 	margin-left: 0px;
 	padding: 0px;

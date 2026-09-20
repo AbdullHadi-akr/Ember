@@ -324,7 +324,7 @@
 .settings-header-widget > .settings-search-controls > .settings-count-widget {
 	margin: 6px 0px;
 	padding: 0px 8px;
-	border-radius: 2px;
+	border-radius: var(--vscode-cornerRadius-xSmall);
 	float: left;
 }
 

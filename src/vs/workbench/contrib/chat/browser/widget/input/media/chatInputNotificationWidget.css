@@ -87,7 +87,7 @@
 	font-family: var(--monaco-monospace-font);
 	font-size: var(--vscode-fontSize-label2);
 	padding: 0 3px;
-	border-radius: 3px;
+	border-radius: var(--vscode-cornerRadius-small);
 	background: var(--vscode-textCodeBlock-background);
 }
 

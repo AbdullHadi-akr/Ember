@@ -292,7 +292,7 @@
 			border: 1px solid var(--vscode-input-border, var(--vscode-chat-requestBorder));
 			background-color: var(--vscode-input-background);
 			color: var(--vscode-input-foreground);
-			border-radius: 4px;
+			border-radius: var(--vscode-cornerRadius-small);
 			resize: none;
 			font-family: var(--vscode-chat-font-family, inherit);
 			font-size: var(--vscode-chat-font-size-body-s);

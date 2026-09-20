@@ -74,7 +74,7 @@
 .profile-edit-widget > .profile-icon-container > .profile-icon {
 	cursor: pointer;
 	padding: 3px;
-	border-radius: 5px;
+	border-radius: var(--vscode-cornerRadius-medium);
 }
 
 .profile-edit-widget > .profile-icon-container > .profile-icon.codicon{
@@ -125,5 +125,5 @@
 	cursor: pointer;
 	line-height: 17px;
 	padding: 2px 23px 2px 8px;
-	border-radius: 2px;
+	border-radius: var(--vscode-cornerRadius-xSmall);
 }

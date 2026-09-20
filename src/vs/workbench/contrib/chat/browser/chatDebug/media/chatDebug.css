@@ -79,7 +79,7 @@
 	border: 1px solid var(--vscode-widget-border, transparent);
 	background: transparent;
 	color: var(--vscode-foreground);
-	border-radius: 4px;
+	border-radius: var(--vscode-cornerRadius-small);
 	cursor: pointer;
 	font-size: 13px;
 	gap: 8px;
@@ -103,7 +103,7 @@
 .chat-debug-home-session-item-shimmer {
 	height: 14px;
 	min-width: 160px;
-	border-radius: 3px;
+	border-radius: var(--vscode-cornerRadius-small);
 	background: linear-gradient(
 		90deg,
 		var(--vscode-descriptionForeground) 25%,
@@ -117,7 +117,7 @@
 .chat-debug-home-session-badge {
 	flex-shrink: 0;
 	padding: 2px 8px;
-	border-radius: 10px;
+	border-radius: var(--vscode-cornerRadius-xLarge);
 	background: var(--vscode-badge-background);
 	color: var(--vscode-badge-foreground);
 	font-size: 11px;
@@ -219,7 +219,7 @@
 }
 .chat-debug-overview-metric-card {
 	border: 1px solid var(--vscode-widget-border, var(--vscode-panel-border));
-	border-radius: 4px;
+	border-radius: var(--vscode-cornerRadius-small);
 	padding: 12px 16px;
 	min-width: 120px;
 }
@@ -236,7 +236,7 @@
 	display: inline-block;
 	height: 16px;
 	min-width: 48px;
-	border-radius: 3px;
+	border-radius: var(--vscode-cornerRadius-small);
 	background: linear-gradient(
 		90deg,
 		var(--vscode-descriptionForeground) 25%,
@@ -281,7 +281,7 @@
 	border: none;
 	background: transparent;
 	color: var(--vscode-foreground);
-	border-radius: 4px;
+	border-radius: var(--vscode-cornerRadius-small);
 	cursor: pointer;
 	opacity: 0.7;
 	flex-shrink: 0;
@@ -482,7 +482,7 @@
 	font-size: 16px;
 	line-height: 1;
 	padding: 2px 6px;
-	border-radius: 4px;
+	border-radius: var(--vscode-cornerRadius-small);
 	opacity: 0.7;
 }
 .chat-debug-detail-button.monaco-button:hover {
@@ -636,7 +636,7 @@
 .chat-debug-message-section {
 	margin-bottom: 4px;
 	border: 1px solid var(--vscode-widget-border, transparent);
-	border-radius: 4px;
+	border-radius: var(--vscode-cornerRadius-small);
 	overflow: hidden;
 }
 .chat-debug-message-section-header {
@@ -645,7 +645,7 @@
 	gap: 4px;
 	padding: 4px 8px;
 	background: var(--vscode-editorWidget-background);
-	border-radius: 3px;
+	border-radius: var(--vscode-cornerRadius-small);
 	user-select: none;
 	font-weight: 600;
 	color: var(--vscode-foreground);
@@ -692,7 +692,7 @@
 .chat-debug-section-copy-btn.monaco-button {
 	flex-shrink: 0;
 	opacity: 0.7;
-	border-radius: 3px;
+	border-radius: var(--vscode-cornerRadius-small);
 	padding: 2px;
 	background: none;
 	border: none;
@@ -873,7 +873,7 @@
 	color: var(--vscode-foreground);
 	background: var(--vscode-button-secondaryBackground, var(--vscode-input-background));
 	border: 1px solid var(--vscode-widget-border, transparent);
-	border-radius: 4px;
+	border-radius: var(--vscode-cornerRadius-small);
 	cursor: pointer;
 }
 .chat-debug-cache-filter-button:hover {
@@ -954,7 +954,7 @@
 	color: var(--vscode-badge-foreground);
 	background: var(--vscode-badge-background);
 	padding: 1px 7px;
-	border-radius: 10px;
+	border-radius: var(--vscode-cornerRadius-xLarge);
 	flex-shrink: 0;
 }
 .chat-debug-cache-group-meta {
@@ -1079,7 +1079,7 @@
 .chat-debug-cache-card {
 	background: var(--vscode-editorWidget-background);
 	border: 1px solid var(--vscode-widget-border, var(--vscode-editorWidget-border));
-	border-radius: 6px;
+	border-radius: var(--vscode-cornerRadius-medium);
 	padding: 10px 12px;
 	display: flex;
 	flex-direction: column;
@@ -1119,7 +1119,7 @@
 }
 button.chat-debug-cache-finding.is-clickable {
 	cursor: pointer;
-	border-radius: 4px;
+	border-radius: var(--vscode-cornerRadius-small);
 }
 button.chat-debug-cache-finding.is-clickable:hover .chat-debug-cache-finding-title {
 	text-decoration: underline;
@@ -1170,7 +1170,7 @@ button.chat-debug-cache-finding.is-clickable:focus-visible {
 .chat-debug-cache-session-health {
 	background: var(--vscode-editorWidget-background);
 	border: 1px solid var(--vscode-widget-border, var(--vscode-editorWidget-border));
-	border-radius: 6px;
+	border-radius: var(--vscode-cornerRadius-medium);
 	padding: 10px 12px;
 	display: flex;
 	flex-direction: column;
@@ -1193,7 +1193,7 @@ button.chat-debug-cache-finding.is-clickable:focus-visible {
 	font-family: var(--monaco-monospace-font);
 	font-size: 10.5px;
 	padding: 2px 8px;
-	border-radius: 10px;
+	border-radius: var(--vscode-cornerRadius-xLarge);
 	border: 1px solid var(--vscode-widget-border, transparent);
 	color: var(--vscode-descriptionForeground);
 }
@@ -1278,14 +1278,14 @@ button.chat-debug-cache-finding.is-clickable:focus-visible {
 	color: var(--vscode-charts-yellow);
 	background: var(--vscode-editorWidget-background);
 	border: 1px solid var(--vscode-charts-yellow);
-	border-radius: 4px;
+	border-radius: var(--vscode-cornerRadius-small);
 	padding: 6px 10px;
 }
 .chat-debug-cache-options-table {
 	display: flex;
 	flex-direction: column;
 	border: 1px solid var(--vscode-widget-border, var(--vscode-editorWidget-border));
-	border-radius: 6px;
+	border-radius: var(--vscode-cornerRadius-medium);
 	overflow: hidden;
 }
 .chat-debug-cache-options-row {
@@ -1359,7 +1359,7 @@ button.chat-debug-cache-finding.is-clickable:focus-visible {
 	display: inline-block;
 	width: 12px;
 	height: 12px;
-	border-radius: 2px;
+	border-radius: var(--vscode-cornerRadius-xSmall);
 }
 .chat-debug-cache-sig-swatch.role-system {
 	background: var(--vscode-charts-purple, #b292ff);
@@ -1390,7 +1390,7 @@ button.chat-debug-cache-finding.is-clickable:focus-visible {
 	gap: 6px;
 	background: var(--vscode-editorWidget-background);
 	border: 1px solid var(--vscode-widget-border, var(--vscode-editorWidget-border));
-	border-radius: 6px;
+	border-radius: var(--vscode-cornerRadius-medium);
 	padding: 12px 14px;
 }
 .chat-debug-cache-sig-lane-row {
@@ -1415,7 +1415,7 @@ button.chat-debug-cache-finding.is-clickable:focus-visible {
 .chat-debug-cache-sig-bar {
 	height: 22px;
 	background: var(--vscode-input-background, #2a2a2a);
-	border-radius: 4px;
+	border-radius: var(--vscode-cornerRadius-small);
 	overflow: hidden;
 	display: flex;
 	position: relative;
@@ -1495,7 +1495,7 @@ button.chat-debug-cache-finding.is-clickable:focus-visible {
 }
 .chat-debug-cache-sig-reuse-rail {
 	height: 6px;
-	border-radius: 3px;
+	border-radius: var(--vscode-cornerRadius-small);
 	overflow: hidden;
 	display: flex;
 	background: var(--vscode-input-background, #2a2a2a);
@@ -1547,7 +1547,7 @@ button.chat-debug-cache-finding.is-clickable:focus-visible {
 .chat-debug-cache-sig-breakdown-table {
 	margin-top: 8px;
 	border: 1px solid var(--vscode-widget-border, var(--vscode-editorWidget-border));
-	border-radius: 6px;
+	border-radius: var(--vscode-cornerRadius-medium);
 	overflow: hidden;
 }
 .chat-debug-cache-sig-breakdown-row {
@@ -1617,7 +1617,7 @@ button.chat-debug-cache-finding.is-clickable:focus-visible {
 	background: var(--vscode-editorWidget-background);
 	border: 1px solid var(--vscode-widget-border, var(--vscode-editorWidget-border));
 	border-left-width: 3px;
-	border-radius: 6px;
+	border-radius: var(--vscode-cornerRadius-medium);
 	overflow: hidden;
 }
 .chat-debug-cache-acc-item.contentDrift,
@@ -1675,7 +1675,7 @@ button.chat-debug-cache-finding.is-clickable:focus-visible {
 	font-family: var(--monaco-monospace-font);
 	font-size: 10.5px;
 	padding: 2px 8px;
-	border-radius: 10px;
+	border-radius: var(--vscode-cornerRadius-xLarge);
 	background: var(--vscode-badge-background);
 	color: var(--vscode-badge-foreground);
 }
@@ -1790,7 +1790,7 @@ button.chat-debug-cache-finding.is-clickable:focus-visible {
 }
 .chat-debug-cache-diff-line {
 	padding: 0 4px;
-	border-radius: 2px;
+	border-radius: var(--vscode-cornerRadius-xSmall);
 }
 .chat-debug-cache-diff-line.add {
 	background: var(--vscode-diffEditor-insertedLineBackground, rgba(95, 184, 107, 0.12));
@@ -1803,11 +1803,11 @@ button.chat-debug-cache-finding.is-clickable:focus-visible {
 }
 .chat-debug-cache-diff-line.add .chat-debug-cache-diff-inner {
 	background: var(--vscode-diffEditor-insertedTextBackground, rgba(95, 184, 107, 0.4));
-	border-radius: 2px;
+	border-radius: var(--vscode-cornerRadius-xSmall);
 }
 .chat-debug-cache-diff-line.remove .chat-debug-cache-diff-inner {
 	background: var(--vscode-diffEditor-removedTextBackground, rgba(244, 135, 113, 0.4));
-	border-radius: 2px;
+	border-radius: var(--vscode-cornerRadius-xSmall);
 }
 
 /* ---- AHP Log (protocol frames) view ---- */
@@ -1851,7 +1851,7 @@ button.chat-debug-cache-finding.is-clickable:focus-visible {
 	color: var(--vscode-input-foreground);
 	background: var(--vscode-input-background);
 	border: 1px solid var(--vscode-input-border, transparent);
-	border-radius: 2px;
+	border-radius: var(--vscode-cornerRadius-xSmall);
 }
 .chat-debug-wirelog-filter::placeholder {
 	color: var(--vscode-input-placeholderForeground);
@@ -1876,7 +1876,7 @@ button.chat-debug-cache-finding.is-clickable:focus-visible {
 .chat-debug-wirelog-chip {
 	padding: 1px 8px;
 	font-size: 11px;
-	border-radius: 10px;
+	border-radius: var(--vscode-cornerRadius-xLarge);
 	color: var(--vscode-badge-foreground);
 	background: var(--vscode-badge-background);
 }
@@ -1972,7 +1972,7 @@ button.chat-debug-cache-finding.is-clickable:focus-visible {
 	padding: 0 6px;
 	font-family: var(--monaco-monospace-font);
 	font-size: 11px;
-	border-radius: 3px;
+	border-radius: var(--vscode-cornerRadius-small);
 	color: var(--vscode-textPreformat-foreground);
 	background: var(--vscode-textPreformat-background);
 	overflow: hidden;
@@ -1985,7 +1985,7 @@ button.chat-debug-cache-finding.is-clickable:focus-visible {
 	font-size: 10px;
 	text-transform: uppercase;
 	letter-spacing: 0.04em;
-	border-radius: 3px;
+	border-radius: var(--vscode-cornerRadius-small);
 	color: var(--vscode-descriptionForeground);
 	background: var(--vscode-badge-background);
 }
@@ -2039,7 +2039,7 @@ button.chat-debug-cache-finding.is-clickable:focus-visible {
 	tab-size: 2;
 	color: var(--vscode-foreground);
 	background: var(--vscode-textCodeBlock-background, var(--vscode-editorWidget-background));
-	border-radius: 3px;
+	border-radius: var(--vscode-cornerRadius-small);
 }
 .chat-debug-wirelog-detail-json-error {
 	color: var(--vscode-errorForeground);
