@@ -386,7 +386,7 @@
 			"problemMatcher": []
 		},
 		{
-			"label": "Transpile and Run Code - OSS",
+			"label": "Transpile and Run Ember",
 			"dependsOn": [
 				"Transpile Client",
 				"Run Dev"
