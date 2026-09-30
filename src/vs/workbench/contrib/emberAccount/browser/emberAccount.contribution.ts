@@ -10,11 +10,13 @@ import { Action2, registerAction2 } from '../../../../platform/actions/common/ac
 import { ServicesAccessor } from '../../../../platform/instantiation/common/instantiation.js';
 import { WorkbenchPhase, registerWorkbenchContribution2 } from '../../../common/contributions.js';
 import { IEmberAccountService } from '../../../services/emberAccount/common/emberAccount.js';
+import { EmberAuthenticationProviderContribution } from './emberAuthenticationProvider.js';
 import { EmberSignInGate } from './emberSignInGate.js';
 
 // The gate must be up before anything behind it becomes reachable, so it runs
 // in the phase that blocks an editor from showing rather than a later one.
 registerWorkbenchContribution2(EmberSignInGate.ID, EmberSignInGate, WorkbenchPhase.BlockStartup);
+registerWorkbenchContribution2(EmberAuthenticationProviderContribution.ID, EmberAuthenticationProviderContribution, WorkbenchPhase.AfterRestored);
 
 registerAction2(class extends Action2 {
 	constructor() {
