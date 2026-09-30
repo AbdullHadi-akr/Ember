@@ -214,7 +214,7 @@
 	background-color: var(--vscode-editorHoverWidget-background);
 	color: var(--vscode-editorHoverWidget-foreground);
 	border: 1px solid var(--vscode-editorHoverWidget-border);
-	border-radius: 6px;
+	border-radius: var(--vscode-cornerRadius-medium);
 	box-shadow: 0 2px 8px var(--vscode-widget-shadow);
 	pointer-events: auto;
 	overflow: hidden;
@@ -254,7 +254,7 @@
 	margin-left: -7px;
 	padding: 3px 7px;
 	border: 1px solid transparent;
-	border-radius: 5px;
+	border-radius: var(--vscode-cornerRadius-medium);
 	background: transparent;
 	color: var(--vscode-descriptionForeground);
 	font-size: 11px;
@@ -405,7 +405,7 @@
 	overflow: hidden;
 	width: 12px;
 	height: 3px;
-	border-radius: 2px;
+	border-radius: var(--vscode-cornerRadius-xSmall);
 	background-color: var(--vscode-scrollbarSlider-background);
 	/* `transform` is animated for the fisheye "fan" magnification; keep origin at the transcript
 	 * edge so the bar grows leftward, never across the scrollbar. */

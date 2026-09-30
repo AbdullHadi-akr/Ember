@@ -201,7 +201,7 @@
 	bottom: 8px;
 	background: var(--vscode-button-background);
 	color: var(--vscode-button-foreground);
-	border-radius: 2px;
+	border-radius: var(--vscode-cornerRadius-xSmall);
 	border: none;
 	cursor: pointer;
 }

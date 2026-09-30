@@ -19,10 +19,10 @@
 	background-color: var(--vscode-editor-inactiveSelectionBackground);
 }
 
-.monaco-editor			.top-left-radius		{ border-top-left-radius: 3px; }
-.monaco-editor			.bottom-left-radius		{ border-bottom-left-radius: 3px; }
-.monaco-editor			.top-right-radius		{ border-top-right-radius: 3px; }
-.monaco-editor			.bottom-right-radius	{ border-bottom-right-radius: 3px; }
+.monaco-editor			.top-left-radius		{ border-top-left-radius: var(--vscode-cornerRadius-small); }
+.monaco-editor			.bottom-left-radius		{ border-bottom-left-radius: var(--vscode-cornerRadius-small); }
+.monaco-editor			.top-right-radius		{ border-top-right-radius: var(--vscode-cornerRadius-small); }
+.monaco-editor			.bottom-right-radius	{ border-bottom-right-radius: var(--vscode-cornerRadius-small); }
 
 .monaco-editor.hc-black .top-left-radius		{ border-top-left-radius: 0; }
 .monaco-editor.hc-black .bottom-left-radius		{ border-bottom-left-radius: 0; }

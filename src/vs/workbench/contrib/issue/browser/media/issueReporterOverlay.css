@@ -162,7 +162,7 @@
 	height: 24px;
 	padding: 0 6px;
 	border: 1px solid var(--vscode-input-border, #555);
-	border-radius: 4px;
+	border-radius: var(--vscode-cornerRadius-small);
 	background: var(--vscode-input-background, #3c3c3c);
 	color: var(--vscode-input-foreground, #ccc);
 	font-size: 12px;
@@ -174,7 +174,7 @@
 .issue-reporter-floating-bar .wizard-segmented-btn {
 	display: flex;
 	align-items: stretch;
-	border-radius: 4px;
+	border-radius: var(--vscode-cornerRadius-small);
 	overflow: hidden;
 }
 
@@ -185,7 +185,7 @@
 	padding: 4px 10px;
 	cursor: pointer;
 	font-size: 12px;
-	border-radius: 4px 0 0 4px;
+	border-radius: var(--vscode-cornerRadius-small) 0 0 var(--vscode-cornerRadius-small);
 	color: var(--vscode-button-foreground, #fff);
 	background: var(--vscode-button-background, #0e639c);
 	border: 1px solid var(--vscode-button-background, #0e639c);
@@ -200,7 +200,7 @@
 	flex: 0 0 auto;
 	padding: 4px 10px;
 	height: 26px;
-	border-radius: 4px 0 0 4px;
+	border-radius: var(--vscode-cornerRadius-small) 0 0 var(--vscode-cornerRadius-small);
 	border-right: none !important;
 	font-size: 12px;
 	line-height: 18px;
@@ -237,7 +237,7 @@
 	align-items: center;
 	padding: 4px 4px;
 	cursor: pointer;
-	border-radius: 0 4px 4px 0;
+	border-radius: 0 var(--vscode-cornerRadius-small) var(--vscode-cornerRadius-small) 0;
 	color: var(--vscode-button-foreground, #fff);
 	background: var(--vscode-button-background, #0e639c);
 	border: 1px solid var(--vscode-button-background, #0e639c);
@@ -252,7 +252,7 @@
 	flex: 0 0 auto;
 	padding: 4px 6px;
 	height: 26px;
-	border-radius: 0 4px 4px 0;
+	border-radius: 0 var(--vscode-cornerRadius-small) var(--vscode-cornerRadius-small) 0;
 	border-left: none !important;
 	min-width: 0;
 }
@@ -419,7 +419,7 @@
 	color: var(--vscode-input-foreground, #ccc);
 	background: var(--vscode-input-background, #3c3c3c);
 	border: 1px solid var(--vscode-input-border, #555);
-	border-radius: 4px;
+	border-radius: var(--vscode-cornerRadius-small);
 	padding: 10px 12px;
 	outline: none;
 	resize: none;
@@ -464,7 +464,7 @@ label/control gap, so the buttons must not add their own margin. */
 	background: transparent !important;
 	color: var(--vscode-foreground, #ccc) !important;
 	border: 1px solid transparent;
-	border-radius: 4px;
+	border-radius: var(--vscode-cornerRadius-small);
 	font-size: 13px;
 	line-height: normal;
 	transition: border-color 0.15s ease, background 0.15s ease;
@@ -527,7 +527,7 @@ label/control gap, so the buttons must not add their own margin. */
 	padding: 0 4px;
 	min-width: 18px;
 	height: 18px;
-	border-radius: 4px;
+	border-radius: var(--vscode-cornerRadius-small);
 	border: 1px solid var(--vscode-input-border, #555);
 	font-size: 11px;
 	font-family: monospace;
@@ -628,7 +628,7 @@ label/control gap, so the buttons must not add their own margin. */
 	position: relative;
 	width: 120px;
 	height: 75px;
-	border-radius: 6px;
+	border-radius: var(--vscode-cornerRadius-medium);
 	overflow: hidden;
 	border: 1px solid var(--vscode-input-border, #555);
 	cursor: pointer;
@@ -917,7 +917,7 @@ extension field is hidden (no fixed-width placeholder needed). */
 	overflow: visible;
 	padding: 8px 12px;
 	border: 1px solid var(--vscode-input-border, #444);
-	border-radius: 4px;
+	border-radius: var(--vscode-cornerRadius-small);
 }
 
 .issue-reporter-wizard .review-description .rendered-markdown {
@@ -963,7 +963,7 @@ extension field is hidden (no fixed-width placeholder needed). */
 	align-items: center;
 	justify-content: center;
 	background: rgba(0, 0, 0, 0.6);
-	border-radius: 5px;
+	border-radius: var(--vscode-cornerRadius-medium);
 	z-index: 2;
 }
 
@@ -1035,7 +1035,7 @@ extension field is hidden (no fixed-width placeholder needed). */
 .issue-reporter-wizard .wizard-submit-btn {
 	padding: 8px 16px;
 	border: 1px solid var(--vscode-button-border, transparent);
-	border-radius: 4px;
+	border-radius: var(--vscode-cornerRadius-small);
 	font-size: 13px;
 	cursor: pointer;
 	font-family: inherit;
@@ -1139,13 +1139,13 @@ extension field is hidden (no fixed-width placeholder needed). */
 
 .issue-reporter-wizard .review-diag-group {
 	border: 1px solid var(--vscode-input-border, #444);
-	border-radius: 4px;
+	border-radius: var(--vscode-cornerRadius-small);
 	padding: 6px 12px;
 }
 
 .issue-reporter-wizard .review-performance-data {
 	border: 1px solid var(--vscode-input-border, #444);
-	border-radius: 4px;
+	border-radius: var(--vscode-cornerRadius-small);
 	padding: 8px 12px;
 	display: flex;
 	flex-direction: column;
@@ -1157,7 +1157,7 @@ extension field is hidden (no fixed-width placeholder needed). */
 	content: '';
 	position: absolute;
 	inset: 0;
-	border-radius: 4px;
+	border-radius: var(--vscode-cornerRadius-small);
 	background: var(--vscode-editor-background, #1e1e1e);
 	opacity: 0.6;
 	pointer-events: none;
@@ -1348,7 +1348,7 @@ extension field is hidden (no fixed-width placeholder needed). */
 	align-items: center;
 	gap: 6px;
 	padding: 6px 16px;
-	border-radius: 4px;
+	border-radius: var(--vscode-cornerRadius-small);
 	cursor: pointer;
 	font-size: 13px;
 	user-select: none;
@@ -1387,7 +1387,7 @@ extension field is hidden (no fixed-width placeholder needed). */
 
 /* Annotation Editor Buttons */
 .issue-reporter-annotation-overlay .monaco-button {
-	border-radius: 4px;
+	border-radius: var(--vscode-cornerRadius-small);
 	height: 28px;
 	font-size: 13px;
 	min-width: 80px;
@@ -1437,7 +1437,7 @@ extension field is hidden (no fixed-width placeholder needed). */
 	height: 28px;
 	min-width: 28px;
 	padding: 0;
-	border-radius: 4px;
+	border-radius: var(--vscode-cornerRadius-small);
 	cursor: pointer;
 	display: flex;
 	align-items: center;
@@ -1516,7 +1516,7 @@ extension field is hidden (no fixed-width placeholder needed). */
 	padding: 10px;
 	background: var(--vscode-editorWidget-background, #2d2d2d);
 	border: 1px solid var(--vscode-editorWidget-border, #555);
-	border-radius: 6px;
+	border-radius: var(--vscode-cornerRadius-medium);
 	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
 	z-index: 4;
 	min-width: 220px;
@@ -1616,7 +1616,7 @@ extension field is hidden (no fixed-width placeholder needed). */
 .issue-reporter-annotation-overlay .annotation-size-button {
 	min-width: 28px;
 	height: 24px;
-	border-radius: 4px;
+	border-radius: var(--vscode-cornerRadius-small);
 	border: 1px solid transparent;
 	background: var(--vscode-button-secondaryBackground, rgba(255, 255, 255, 0.08));
 	color: var(--vscode-button-secondaryForeground, var(--vscode-foreground, #ccc));
@@ -1769,7 +1769,7 @@ extension field is hidden (no fixed-width placeholder needed). */
 	color: #fff;
 	background: rgba(0, 0, 0, 0.7);
 	padding: 1px 4px;
-	border-radius: 2px;
+	border-radius: var(--vscode-cornerRadius-xSmall);
 	z-index: 1;
 }
 

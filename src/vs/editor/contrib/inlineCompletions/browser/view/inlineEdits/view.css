@@ -8,7 +8,7 @@
 */
 
 .monaco-editor {
-	--inline-edit-border-radius: 3px;
+	--inline-edit-border-radius: var(--vscode-cornerRadius-small);
 
 	.inline-edits-view-indicator {
 		display: flex;
@@ -211,7 +211,7 @@
 	display: flex;
 	gap: 4px;
 	align-items: center;
-	border-radius: 3px;
+	border-radius: var(--vscode-cornerRadius-small);
 	cursor: pointer;
 
 	.monaco-keybinding-key {

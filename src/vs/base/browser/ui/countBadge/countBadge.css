@@ -5,7 +5,7 @@
 
 .monaco-count-badge {
 	padding: 3px 5px;
-	border-radius: 11px;
+	border-radius: var(--vscode-cornerRadius-xLarge);
 	font-size: 11px;
 	min-width: 18px;
 	min-height: 18px;
@@ -18,7 +18,7 @@
 
 .monaco-count-badge.long {
 	padding: 2px 3px;
-	border-radius: 2px;
+	border-radius: var(--vscode-cornerRadius-xSmall);
 	min-height: auto;
 	line-height: normal;
 }

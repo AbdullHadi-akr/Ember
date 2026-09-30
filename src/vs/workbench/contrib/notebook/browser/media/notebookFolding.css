@@ -61,7 +61,7 @@
 	position: relative;
 	left: 0px;
 	padding: 2px;
-	border-radius: 5px;
+	border-radius: var(--vscode-cornerRadius-medium);
 	margin-right: 4px;
 	height: 16px;
 	width: 16px;

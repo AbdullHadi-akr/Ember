@@ -7,7 +7,7 @@
 	display: none;
 	color: inherit;
 	padding: 6px;
-	border-radius: 6px;
+	border-radius: var(--vscode-cornerRadius-medium);
 	border: 1px solid var(--vscode-inlineChat-border);
 	background: var(--vscode-inlineChat-background);
 }
@@ -30,7 +30,7 @@
 	box-sizing: border-box;
 	outline: 1px solid var(--vscode-inlineChatInput-border);
 	outline-offset: -1px;
-	border-radius: 2px;
+	border-radius: var(--vscode-cornerRadius-xSmall);
 }
 
 .monaco-workbench .notebookOverlay .cell-chat-part .inline-chat .body .content.synthetic-focus {
@@ -71,8 +71,8 @@
 	flex-direction: column;
 	align-self: stretch;
 	padding-right: 4px;
-	border-top-right-radius: 2px;
-	border-bottom-right-radius: 2px;
+	border-top-right-radius: var(--vscode-cornerRadius-xSmall);
+	border-bottom-right-radius: var(--vscode-cornerRadius-xSmall);
 	background: var(--vscode-inlineChatInput-background);
 }
 
@@ -147,7 +147,7 @@
 }
 
 .monaco-workbench .notebookOverlay .cell-chat-part .inline-chat .status .label .slash-command-pill CODE {
-	border-radius: 3px;
+	border-radius: var(--vscode-cornerRadius-small);
 	padding: 0 1px;
 	background-color: var(--vscode-chat-slashCommandBackground);
 	color: var(--vscode-chat-slashCommandForeground);
@@ -172,7 +172,7 @@
 	color: var(--vscode-textPreformat-foreground);
 	background-color: var(--vscode-textPreformat-background);
 	padding: 1px 3px;
-	border-radius: 4px;
+	border-radius: var(--vscode-cornerRadius-small);
 	border: 1px solid var(--vscode-textPreformat-border);
 }
 
@@ -258,8 +258,8 @@
 	padding: 6px;
 	border: 1px solid var(--vscode-inlineChat-border);
 	border-top: none;
-	border-bottom-left-radius: 2px;
-	border-bottom-right-radius: 2px;
+	border-bottom-left-radius: var(--vscode-cornerRadius-xSmall);
+	border-bottom-right-radius: var(--vscode-cornerRadius-xSmall);
 	margin: 0 2px 6px 2px;
 }
 
@@ -271,7 +271,7 @@
 	display: inherit;
 	padding: 6px;
 	border: 1px solid var(--vscode-inlineChat-border);
-	border-radius: 2px;
+	border-radius: var(--vscode-cornerRadius-xSmall);
 	margin: 0 2px 6px 2px;
 }
 

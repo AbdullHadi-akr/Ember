@@ -34,6 +34,20 @@ perf.mark('code/didLoadMainBundle');
 const portable = configurePortable(product);
 
 const args = parseCLIArgs();
+
+// Windows launches a protocol handler straight from the registry, so the
+// process inherits none of the environment `scripts/code.bat` sets. Without
+// `VSCODE_DEV` a build running out of sources reports itself as built: it
+// resolves the *built* user data directory, so it never finds the running dev
+// instance to hand the URL to, and then loads the production `workbench.html`,
+// whose CSP rejects the dev bootstrap - leaving an empty window instead of a
+// completed sign-in. A stamped commit is what actually distinguishes a build,
+// so restore dev mode when a URL launch arrives without one. This has to
+// happen before the user data path is resolved below.
+if (args['open-url'] && !product.commit && !process.env['VSCODE_DEV']) {
+	process.env['VSCODE_DEV'] = '1';
+}
+
 // Configure static command line arguments
 perf.mark('code/willConfigureCommandlineSwitches');
 const argvConfig = configureCommandlineSwitchesSync(args);

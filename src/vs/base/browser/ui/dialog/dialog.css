@@ -238,7 +238,7 @@
 	outline-width: 1px;
 	outline-style: solid;
 	outline-color: var(--vscode-focusBorder);
-	border-radius: 4px;
+	border-radius: var(--vscode-cornerRadius-small);
 }
 
 

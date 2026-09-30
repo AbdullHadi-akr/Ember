@@ -5,7 +5,7 @@
 
 .chat-inline-anchor-widget {
 	border: 0.5px solid var(--vscode-chat-requestBorder, var(--vscode-input-background, transparent));
-	border-radius: 4px;
+	border-radius: var(--vscode-cornerRadius-small);
 	margin: 0 1px;
 	padding: 1px 3px;
 	text-wrap: nowrap;

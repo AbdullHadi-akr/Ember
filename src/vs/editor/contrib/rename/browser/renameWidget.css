@@ -6,7 +6,7 @@
 .monaco-editor .rename-box {
 	z-index: 100;
 	color: inherit;
-	border-radius: 4px;
+	border-radius: var(--vscode-cornerRadius-small);
 	box-shadow: var(--vscode-shadow-lg);
 }
 
@@ -16,7 +16,7 @@
 
 .monaco-editor .rename-box .rename-input-with-button {
 	padding: 3px;
-	border-radius: 4px;
+	border-radius: var(--vscode-cornerRadius-small);
 	width: calc(100% - 8px); /* 4px padding on each side */
 }
 
@@ -35,7 +35,7 @@
 	padding: 3px;
 	background-color: transparent;
 	border: none;
-	border-radius: 5px;
+	border-radius: var(--vscode-cornerRadius-medium);
 	cursor: pointer;
 }
 
@@ -44,7 +44,7 @@
 }
 
 .monaco-editor .rename-box .rename-candidate-list-container .monaco-list-row {
-	border-radius: 2px;
+	border-radius: var(--vscode-cornerRadius-xSmall);
 }
 
 .monaco-editor .rename-box .rename-label {

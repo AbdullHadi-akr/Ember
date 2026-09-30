@@ -23,7 +23,7 @@
 
 .chat-confirmation-widget-container .chat-confirmation-widget .chat-confirmation-widget-title {
 	width: 100%;
-	border-radius: 3px;
+	border-radius: var(--vscode-cornerRadius-small);
 	padding: 2px 6px 2px 2px;
 	user-select: none;
 
@@ -42,8 +42,8 @@
 		left: 0px;
 		right: 0;
 		top: 0px;
-		border-top-left-radius: 10px;
-		border-top-right-radius: 10px;
+		border-top-left-radius: var(--vscode-cornerRadius-xLarge);
+		border-top-right-radius: var(--vscode-cornerRadius-xLarge);
 	}
 
 	.chat-collapsible-top-level-resource-group {
@@ -362,7 +362,7 @@
 			max-width: 100%;
 			padding: 4px 6px 4px 0;
 			border: none;
-			border-radius: 2px;
+			border-radius: var(--vscode-cornerRadius-xSmall);
 			background-color: unset;
 			color: var(--vscode-descriptionForeground);
 		}
@@ -418,7 +418,7 @@
 	.chat-editing-session-actions .monaco-button.secondary.monaco-text-button.codicon {
 		cursor: pointer;
 		padding: 2px;
-		border-radius: 4px;
+		border-radius: var(--vscode-cornerRadius-small);
 		display: inline-flex;
 	}
 
@@ -435,7 +435,7 @@
 	}
 
 	.chat-editing-session-list .monaco-list-row {
-		border-radius: 4px;
+		border-radius: var(--vscode-cornerRadius-small);
 	}
 
 	.chat-editing-session-list .monaco-list-row:hover {

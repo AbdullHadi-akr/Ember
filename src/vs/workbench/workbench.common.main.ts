@@ -126,6 +126,7 @@ import './services/authentication/browser/authenticationMcpAccessService.js';
 import './services/authentication/browser/authenticationMcpService.js';
 import './services/authentication/browser/dynamicAuthenticationProviderStorageService.js';
 import './services/authentication/browser/authenticationQueryService.js';
+import './services/emberAccount/browser/emberAccountService.js';
 import '../platform/hover/browser/hoverService.js';
 import '../platform/userInteraction/browser/userInteractionServiceImpl.js';
 import './services/assignment/common/assignmentService.js';
@@ -395,6 +396,9 @@ import './contrib/welcomeAgentSessions/browser/agentSessionsWelcome.contribution
 import './contrib/welcomeWalkthrough/browser/walkThrough.contribution.js';
 import './contrib/welcomeViews/common/viewsWelcome.contribution.js';
 import './contrib/welcomeViews/common/newFile.contribution.js';
+
+// Ember Account
+import './contrib/emberAccount/browser/emberAccount.contribution.js';
 
 // Welcome Onboarding
 import './contrib/welcomeOnboarding/browser/welcomeOnboarding.contribution.js';

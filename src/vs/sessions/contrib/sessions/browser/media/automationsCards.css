@@ -123,7 +123,7 @@
 .automations-card-wrapper {
 	display: flex;
 	flex-direction: column;
-	border-radius: 6px;
+	border-radius: var(--vscode-cornerRadius-medium);
 	overflow: hidden;
 	height: 100%;
 }
@@ -136,7 +136,7 @@
 	gap: 12px;
 	padding: 12px 16px;
 	border: 1px solid var(--vscode-editorWidget-border);
-	border-radius: 6px;
+	border-radius: var(--vscode-cornerRadius-medium);
 	height: 100%;
 	cursor: pointer;
 	touch-action: manipulation;
@@ -267,7 +267,7 @@
 	height: 24px;
 	padding: 0;
 	border: none;
-	border-radius: 4px;
+	border-radius: var(--vscode-cornerRadius-small);
 	background: transparent;
 	color: var(--vscode-icon-foreground);
 	cursor: pointer;

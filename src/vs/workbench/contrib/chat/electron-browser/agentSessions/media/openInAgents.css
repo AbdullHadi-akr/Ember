@@ -9,7 +9,7 @@
 	align-items: center;
 	height: 22px;
 	padding: 0 4px;
-	border-radius: 5px;
+	border-radius: var(--vscode-cornerRadius-medium);
 	cursor: pointer;
 	color: var(--vscode-titleBar-activeForeground);
 	-webkit-app-region: no-drag;

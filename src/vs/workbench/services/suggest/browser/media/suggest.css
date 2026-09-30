@@ -32,7 +32,7 @@
 	z-index: 40;
 	display: flex;
 	flex-direction: column;
-	border-radius: 3px;
+	border-radius: var(--vscode-cornerRadius-small);
 }
 
 .workbench-suggest-widget.message {
@@ -428,7 +428,7 @@
 }
 
 .workbench-suggest-widget .suggest-details code {
-	border-radius: 3px;
+	border-radius: var(--vscode-cornerRadius-small);
 	padding: 0 0.4em;
 }
 

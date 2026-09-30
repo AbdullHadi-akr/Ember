@@ -59,7 +59,7 @@
 }
 
 .comments-panel .comments-panel-container .tree-container .comment-thread-container .comment-metadata-container .relevance {
-	border-radius: 2px;
+	border-radius: var(--vscode-cornerRadius-xSmall);
 	background-color: var(--vscode-badge-background);
 	color: var(--vscode-badge-foreground);
 	padding: 0px 4px 1px 4px;

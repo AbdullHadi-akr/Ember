@@ -36,7 +36,7 @@
 	width: 22px;
 	height: 22px;
 	line-height: 22px;
-	border-radius: 20px;
+	border-radius: var(--vscode-cornerRadius-circle);
 	right: 5px;
 	display: flex;
 	align-items: center;
@@ -144,7 +144,7 @@
 	width: 14px;
 	height: 14px;
 	line-height: 14px;
-	border-radius: 20px;
+	border-radius: var(--vscode-cornerRadius-circle);
 	text-align: center;
 	display: flex;
 	align-items: center;

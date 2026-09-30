@@ -20,7 +20,7 @@
 
 .action-widget .tabbed-action-list-tabbar .monaco-custom-radio > .monaco-button {
 	border: none;
-	border-radius: 4px;
+	border-radius: var(--vscode-cornerRadius-small);
 }
 
 .action-widget .tabbed-action-list-tabbar .monaco-custom-radio > .monaco-button:not(.active) {

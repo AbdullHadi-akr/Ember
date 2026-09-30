@@ -14,7 +14,7 @@
 .monaco-action-bar .action-item.menu-entry.text-only .action-label {
 	color: var(--vscode-descriptionForeground);
 	overflow: hidden;
-	border-radius: 2px;
+	border-radius: var(--vscode-cornerRadius-xSmall);
 }
 
 .monaco-action-bar .action-item.menu-entry.text-only.use-comma:not(:last-of-type) .action-label::after {
@@ -28,7 +28,7 @@
 .monaco-dropdown-with-default {
 	display: flex !important;
 	flex-direction: row;
-	border-radius: 5px;
+	border-radius: var(--vscode-cornerRadius-medium);
 }
 
 .monaco-dropdown-with-default > .action-container > .action-label {

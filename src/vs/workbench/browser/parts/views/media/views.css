@@ -332,7 +332,7 @@
 .viewpane-filter-container > .viewpane-filter > .viewpane-filter-controls > .viewpane-filter-badge {
 	margin: 4px 2px 4px 0px;
 	padding: 0px 8px;
-	border-radius: 2px;
+	border-radius: var(--vscode-cornerRadius-xSmall);
 }
 
 .viewpane-filter > .viewpane-filter-controls > .viewpane-filter-badge.hidden,

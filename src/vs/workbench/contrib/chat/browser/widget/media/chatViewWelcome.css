@@ -211,7 +211,7 @@ div.chat-welcome-view {
 		gap: 6px;
 		height: 20px;
 		padding: 0 6px;
-		border-radius: 4px;
+		border-radius: var(--vscode-cornerRadius-small);
 		background-color: var(--vscode-editorWidget-background);
 		cursor: pointer;
 		border: 1px solid var(--vscode-chat-requestBorder, var(--vscode-input-background, transparent));

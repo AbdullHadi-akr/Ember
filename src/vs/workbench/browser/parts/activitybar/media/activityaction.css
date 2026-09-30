@@ -165,7 +165,7 @@
 	height: 16px;
 	line-height: 16px;
 	padding: 0 4px;
-	border-radius: 20px;
+	border-radius: var(--vscode-cornerRadius-circle);
 	text-align: center;
 }
 
@@ -176,7 +176,7 @@
 	height: 13px;
 	line-height: 13px;
 	padding: 0 2px;
-	border-radius: 13px;
+	border-radius: var(--vscode-cornerRadius-circle);
 	border: none !important;
 }
 
@@ -188,7 +188,7 @@
 	top: 24px;
 	right: 6px;
 	padding: 2px 3px;
-	border-radius: 7px;
+	border-radius: var(--vscode-cornerRadius-large);
 	background-color: var(--vscode-profileBadge-background);
 	color: var(--vscode-profileBadge-foreground);
 	border: 2px solid var(--vscode-activityBar-background);
@@ -200,7 +200,7 @@
 	top: 10px;
 	right: 2px;
 	padding: 2px 2px;
-	border-radius: 6px;
+	border-radius: var(--vscode-cornerRadius-medium);
 }
 
 .monaco-workbench .activitybar > .content :not(.monaco-menu) > .monaco-action-bar .action-item:active .profile-text-overlay,

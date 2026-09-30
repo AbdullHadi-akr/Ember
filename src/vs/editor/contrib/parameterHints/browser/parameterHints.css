@@ -105,7 +105,7 @@
 
 .monaco-editor .parameter-hints-widget .docs code {
 	font-family: var(--monaco-monospace-font);
-	border-radius: 3px;
+	border-radius: var(--vscode-cornerRadius-small);
 	padding: 0 0.4em;
 	background-color: var(--vscode-textCodeBlock-background);
 }

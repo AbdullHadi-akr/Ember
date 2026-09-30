@@ -16,13 +16,13 @@
 }
 
 .monaco-custom-radio > .monaco-button:first-child {
-	border-top-left-radius: 3px;
-	border-bottom-left-radius: 3px;
+	border-top-left-radius: var(--vscode-cornerRadius-small);
+	border-bottom-left-radius: var(--vscode-cornerRadius-small);
 }
 
 .monaco-custom-radio > .monaco-button:last-child {
-	border-top-right-radius: 3px;
-	border-bottom-right-radius: 3px;
+	border-top-right-radius: var(--vscode-cornerRadius-small);
+	border-bottom-right-radius: var(--vscode-cornerRadius-small);
 }
 
 .monaco-custom-radio:not(.segmented) > .monaco-button:not(.active):not(:last-child) {

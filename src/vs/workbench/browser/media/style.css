@@ -98,11 +98,11 @@ body {
 }
 
 .monaco-workbench.border.mac {
-	border-radius: 10px;
+	border-radius: var(--vscode-cornerRadius-xLarge);
 }
 
 .monaco-workbench.border.mac.macos-tahoe {
-	border-radius: 16px; /* macOS Tahoe increased rounded corners size */
+	border-radius: var(--vscode-cornerRadius-xLarge); /* macOS Tahoe increased rounded corners size */
 }
 
 .monaco-workbench img {

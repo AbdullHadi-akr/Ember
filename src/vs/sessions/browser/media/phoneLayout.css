@@ -157,7 +157,7 @@
 	height: 60vh !important;
 	z-index: 200;
 	animation: panel-slide-up 250ms ease-out;
-	border-radius: 16px 16px 0 0;
+	border-radius: var(--vscode-cornerRadius-xLarge) 16px 0 0;
 	overflow: hidden;
 }
 

@@ -354,7 +354,7 @@
 		width: 5px;
 		border-left: 1px solid var(--vscode-chat-requestBorder);
 		border-bottom: 1px solid var(--vscode-chat-requestBorder);
-		border-bottom-left-radius: 5px;
+		border-bottom-left-radius: var(--vscode-cornerRadius-medium);
 	}
 
 	.monaco-button.hidden,
@@ -448,7 +448,7 @@
 			[data-code] {
 				background-color: var(--vscode-textPreformat-background);
 				padding: 1px 3px;
-				border-radius: 4px;
+				border-radius: var(--vscode-cornerRadius-small);
 				border: 1px solid var(--vscode-textPreformat-border);
 				white-space: pre-wrap;
 			}

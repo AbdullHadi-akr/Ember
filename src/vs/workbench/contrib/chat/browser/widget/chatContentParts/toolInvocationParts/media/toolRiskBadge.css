@@ -51,7 +51,7 @@
 	line-height: 1;
 	color: var(--vscode-descriptionForeground);
 	cursor: pointer;
-	border-radius: 3px;
+	border-radius: var(--vscode-cornerRadius-small);
 }
 
 .chat-confirmation-widget2 > .tool-risk-badge .tool-risk-details-icon:focus {

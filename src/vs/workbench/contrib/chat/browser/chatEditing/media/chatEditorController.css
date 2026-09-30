@@ -8,7 +8,7 @@
 	transition: opacity 0.2s ease-in-out;
 	display: flex;
 	box-shadow: var(--vscode-shadow-md);
-	border-radius: 6px;
+	border-radius: var(--vscode-cornerRadius-medium);
 	overflow: hidden;
 }
 
@@ -18,7 +18,7 @@
 
 .chat-diff-change-content-widget .monaco-action-bar {
 	padding: 4px 4px;
-	border-radius: 6px;
+	border-radius: var(--vscode-cornerRadius-medium);
 	background-color: var(--vscode-editorWidget-background);
 	color: var(--vscode-foreground);
 	border: 1px solid var(--vscode-editorWidget-border);
@@ -30,7 +30,7 @@
 }
 
 .chat-diff-change-content-widget .monaco-action-bar .action-item .action-label {
-	border-radius: 4px;
+	border-radius: var(--vscode-cornerRadius-small);
 	font-size: 11px;
 	line-height: 14px;
 	padding: 4px 6px;

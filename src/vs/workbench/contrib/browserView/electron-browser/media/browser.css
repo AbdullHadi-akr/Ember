@@ -219,7 +219,7 @@
 		margin: 0;
 		padding: 3px 4px;
 		flex-shrink: 0;
-		border-radius: 9999px;
+		border-radius: var(--vscode-cornerRadius-circle);
 		border: 1px solid var(--vscode-button-secondaryBorder, transparent);
 		background-color: var(--vscode-button-secondaryBackground);
 		color: var(--vscode-button-secondaryForeground);
@@ -443,7 +443,7 @@
 		--vscode-sash-hover-size: 4px;
 
 		&:not(.disabled)::before {
-			border-radius: 2px;
+			border-radius: var(--vscode-cornerRadius-xSmall);
 			background: var(--vscode-editorWidget-resizeBorder, var(--vscode-editorWidget-border));
 			transition: background-color 0.1s ease-out;
 		}
@@ -456,7 +456,7 @@
 		/* SE corner drag handle indicator. */
 		& > .orthogonal-drag-handle {
 			box-sizing: border-box;
-			border-radius: 2px;
+			border-radius: var(--vscode-cornerRadius-xSmall);
 
 			&.end {
 				cursor: nwse-resize !important;
@@ -473,7 +473,7 @@
 				width: 8px;
 				height: 8px;
 				background: repeating-linear-gradient(135deg, transparent 0px 4px, currentColor 4px 20px);
-				border-radius: 2px;
+				border-radius: var(--vscode-cornerRadius-xSmall);
 				transition: color 0.1s ease-out;
 			}
 		}
@@ -536,7 +536,7 @@
 
 	.browser-overlay-paused-message {
 		padding: 20px 40px;
-		border-radius: 4px;
+		border-radius: var(--vscode-cornerRadius-small);
 		border: 1px solid var(--vscode-editorWidget-border);
 		background-color: var(--vscode-editor-background);
 		box-shadow: var(--vscode-shadow-lg);
@@ -599,7 +599,7 @@
 		code {
 			background-color: var(--vscode-textCodeBlock-background);
 			padding: 1px 4px;
-			border-radius: 3px;
+			border-radius: var(--vscode-cornerRadius-small);
 			font-family: var(--monaco-monospace-font);
 			font-size: 12px;
 		}

@@ -4,7 +4,7 @@
  *--------------------------------------------------------------------------------------------*/
 
 .monaco-workbench .kernel-action-view-item {
-	border-radius: 5px;
+	border-radius: var(--vscode-cornerRadius-medium);
 }
 .monaco-workbench .kernel-action-view-item:hover {
 	background-color: var(--vscode-toolbar-hoverBackground);
@@ -17,7 +17,7 @@
 .monaco-workbench .kernel-action-view-item .kernel-label {
 	font-size: 11px;
 	padding: 3px 5px 3px 3px;
-	border-radius: 5px;
+	border-radius: var(--vscode-cornerRadius-medium);
 	height: 16px;
 	display: inline-flex;
 	vertical-align: text-bottom;

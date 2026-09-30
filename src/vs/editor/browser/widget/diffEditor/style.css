@@ -508,7 +508,7 @@
 
 					.actions-container {
 						width: fit-content;
-						border-radius: 4px;
+						border-radius: var(--vscode-cornerRadius-small);
 						background: var(--vscode-editorGutter-itemBackground);
 
 						.action-item {

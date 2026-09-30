@@ -75,7 +75,7 @@
 }
 
 .explorer-folders-view .explorer-item .monaco-icon-name-container.multiple > .label-name > .monaco-highlighted-label {
-	border-radius: 3px;
+	border-radius: var(--vscode-cornerRadius-small);
 }
 
 .explorer-folders-view .explorer-item .monaco-icon-name-container.multiple > .label-name:hover > .monaco-highlighted-label,

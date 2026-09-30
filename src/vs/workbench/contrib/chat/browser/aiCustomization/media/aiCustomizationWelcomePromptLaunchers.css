@@ -72,7 +72,7 @@
 	align-items: center;
 	min-height: 36px;
 	height: 36px;
-	border-radius: 6px;
+	border-radius: var(--vscode-cornerRadius-medium);
 	background: var(--vscode-input-background);
 	border: var(--vscode-strokeThickness) solid var(--vscode-input-border, transparent);
 	padding: 0 4px 0 12px;
@@ -123,7 +123,7 @@
 	height: 28px;
 	flex-shrink: 0;
 	border: none;
-	border-radius: 4px;
+	border-radius: var(--vscode-cornerRadius-small);
 	background: transparent;
 	color: var(--vscode-descriptionForeground);
 	cursor: pointer;
@@ -291,7 +291,7 @@
 	align-items: center;
 	gap: 4px;
 	padding: 4px 6px;
-	border-radius: 4px;
+	border-radius: var(--vscode-cornerRadius-small);
 	background: var(--vscode-button-secondaryBackground);
 	border: 1px solid var(--vscode-button-secondaryBorder, var(--vscode-button-border, var(--vscode-contrastBorder, transparent)));
 }

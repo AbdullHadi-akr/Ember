@@ -100,7 +100,7 @@
 	border-color: var(--vscode-inputOption-activeBorder);
 	background: var(--vscode-inputOption-activeBackground);
 	border: 1px solid var(--vscode-inputOption-activeBorder);
-	border-radius: 3px;
+	border-radius: var(--vscode-cornerRadius-small);
 }
 
 .test-explorer .monaco-list-row:not(.focused, :hover) .monaco-action-bar.testing-is-continuous-run .action-item {
@@ -125,7 +125,7 @@
 	outline: 1px solid var(--vscode-inputValidation-errorBorder);
 	background: var(--vscode-inputValidation-errorBackground);
 	padding: 2px 4px;
-	border-radius: 2px;
+	border-radius: var(--vscode-cornerRadius-xSmall);
 	margin: 3px 12px 3px 3px;
 	line-height: 17px;
 	font-size: 12px;
@@ -417,8 +417,8 @@
 .monaco-workbench .test-error-content-widget .inner {
 	margin-left: 20px;
 	color: var(--vscode-testing-message-error-badgeForeground) !important;
-	border-top-right-radius: 2px;
-	border-bottom-right-radius: 2px;
+	border-top-right-radius: var(--vscode-cornerRadius-xSmall);
+	border-bottom-right-radius: var(--vscode-cornerRadius-xSmall);
 	padding-right: 3px;
 	display: flex !important;
 	align-items: center;
@@ -481,7 +481,7 @@
 .test-coverage-bars .bar {
 	height: 8px;
 	border: 1px solid currentColor;
-	border-radius: 2px;
+	border-radius: var(--vscode-cornerRadius-xSmall);
 	position: relative;
 	overflow: hidden;
 }
@@ -675,7 +675,7 @@
 		text-align: center;
 		transform: translate(-50%, -50%);
 		padding: calc(var(--vscode-testing-coverage-lineHeight) / 10);
-		border-radius: 2px;
+		border-radius: var(--vscode-cornerRadius-xSmall);
 		font: normal normal normal calc(var(--vscode-testing-coverage-lineHeight) / 2)/1 codicon;
 		border: 1px solid;
 	}
@@ -688,8 +688,8 @@
 		margin: 0 0.7em 0 0.4em;
 		padding: 0.2em 0 0.2em 0.2em;
 		/* display: inline-block; */
-		border-top-left-radius: 2px;
-		border-bottom-left-radius: 2px;
+		border-top-left-radius: var(--vscode-cornerRadius-xSmall);
+		border-bottom-left-radius: var(--vscode-cornerRadius-xSmall);
 
 		&::after {
 			content: '';
