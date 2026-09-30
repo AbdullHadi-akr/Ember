@@ -60,12 +60,37 @@
 	margin-top: var(--vscode-spacing-size40);
 }
 
+.ember-signin-divider {
+	display: flex;
+	align-items: center;
+	gap: var(--vscode-spacing-size80);
+	width: 100%;
+	color: var(--vscode-descriptionForeground);
+	font-size: var(--vscode-fontSize-body2);
+}
+
+.ember-signin-divider::before,
+.ember-signin-divider::after {
+	content: '';
+	flex: 1;
+	border-top: var(--vscode-strokeThickness) solid var(--vscode-widget-border);
+}
+
+.ember-signin-email {
+	display: flex;
+	flex-direction: column;
+	gap: var(--vscode-spacing-size80);
+	width: 100%;
+	text-align: left;
+}
+
 .ember-signin-status {
 	color: var(--vscode-descriptionForeground);
 	font-size: var(--vscode-fontSize-body2);
 }
 
 .ember-signin-error {
+	box-sizing: border-box;
 	width: 100%;
 	padding: var(--vscode-spacing-size80) var(--vscode-spacing-size120);
 	border: var(--vscode-strokeThickness) solid var(--vscode-inputValidation-errorBorder);

@@ -51,14 +51,15 @@ export function resolveGateVisibility(state: EmberAccountState, configuration: I
 }
 
 /**
- * Whether a usable account backend is configured. An empty `providers` list is
- * treated as unconfigured: the gate would otherwise render with no way out.
+ * Whether a usable account backend is configured. With no providers and no
+ * email sign-in it is treated as unconfigured: the gate would otherwise render
+ * with no way out.
  */
 export function isAccountBackendConfigured(configuration: IEmberAccountConfiguration | undefined): configuration is IEmberAccountConfiguration {
 	return !!configuration
 		&& !!configuration.url
 		&& !!configuration.anonKey
-		&& configuration.providers.length > 0;
+		&& (configuration.providers.length > 0 || !!configuration.emailSignIn);
 }
 
 /**

@@ -438,8 +438,16 @@ export interface IEmberAccountConfiguration {
 	 * must never reach the client.
 	 */
 	readonly anonKey: string;
-	/** OAuth providers offered on the sign-in gate, in display order. */
+	/**
+	 * OAuth providers offered on the sign-in gate, in display order. These are
+	 * the only way to create an account from the client.
+	 */
 	readonly providers: readonly IEmberAccountProvider[];
+	/**
+	 * Offer email/password sign-in for existing accounts. There is deliberately
+	 * no email sign-up: new accounts come from a provider in {@link providers}.
+	 */
+	readonly emailSignIn?: boolean;
 }
 
 export interface IEmberAccountProvider {

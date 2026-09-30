@@ -42,6 +42,15 @@ export interface IEmberAccountService {
 	 */
 	signIn(providerId: string): Promise<void>;
 
+	/** Whether email/password sign-in is offered on the sign-in gate. */
+	readonly emailSignInEnabled: boolean;
+
+	/**
+	 * Signs in to an existing account with email and password. There is no
+	 * email sign-up: accounts are created through an OAuth provider only.
+	 */
+	signInWithPassword(email: string, password: string): Promise<void>;
+
 	/** Clears the stored session. */
 	signOut(): Promise<void>;
 

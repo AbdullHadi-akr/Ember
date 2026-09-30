@@ -49,19 +49,21 @@ suite('EmberAuthGate', () => {
 		});
 	});
 
-	test('backend configuration is only complete with url, key and a provider', () => {
+	test('backend configuration is only complete with url, key and a way to sign in', () => {
 		assert.deepStrictEqual({
 			complete: isAccountBackendConfigured(configured),
 			undefinedConfig: isAccountBackendConfigured(undefined),
 			noUrl: isAccountBackendConfigured({ ...configured, url: '' }),
 			noKey: isAccountBackendConfigured({ ...configured, anonKey: '' }),
 			noProviders: isAccountBackendConfigured({ ...configured, providers: [] }),
+			emailOnly: isAccountBackendConfigured({ ...configured, providers: [], emailSignIn: true }),
 		}, {
 			complete: true,
 			undefinedConfig: false,
 			noUrl: false,
 			noKey: false,
 			noProviders: false,
+			emailOnly: true,
 		});
 	});
 

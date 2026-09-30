@@ -94,12 +94,9 @@
 			{
 				"id": "github",
 				"label": "GitHub"
-			},
-			{
-				"id": "google",
-				"label": "Google"
 			}
-		]
+		],
+		"emailSignIn": true
 	},
 	"defaultChatAgent": {
 		"extensionId": "GitHub.copilot",

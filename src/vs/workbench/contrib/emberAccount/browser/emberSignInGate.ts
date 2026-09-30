@@ -27,8 +27,10 @@ export class EmberSignInGate extends Disposable implements IWorkbenchContributio
 
 	private overlay: HTMLElement | undefined;
 	private readonly cardDisposables = this._register(new MutableDisposable<DisposableStore>());
-	private busy = false;
+	private busy: 'browser' | 'password' | undefined;
 	private error: string | undefined;
+	/** Kept across re-renders so a failed attempt does not wipe the typed email. */
+	private email = '';
 
 	constructor(
 		@IEmberAccountService private readonly accountService: IEmberAccountService,
@@ -67,7 +69,7 @@ export class EmberSignInGate extends Disposable implements IWorkbenchContributio
 		this.overlay = undefined;
 	}
 
-	private render(): void {
+	private render(focusPassword = false): void {
 		const overlay = this.overlay;
 		if (!overlay) {
 			return;
@@ -75,25 +77,33 @@ export class EmberSignInGate extends Disposable implements IWorkbenchContributio
 		this.cardDisposables.value = renderSignInCard(overlay, {
 			productName: this.productService.nameLong,
 			providers: this.accountService.providers,
+			emailSignIn: this.accountService.emailSignInEnabled,
+			email: this.email,
 			busy: this.busy,
 			error: this.error,
-			onSignIn: providerId => this.signIn(providerId)
+			onSignIn: providerId => this.run('browser', () => this.accountService.signIn(providerId)),
+			onEmailSignIn: (email, password) => this.run('password', () => this.accountService.signInWithPassword(email, password)),
+			onEmailChange: email => this.email = email
 		});
 
-		// Hold focus inside the gate: nothing behind it is actionable.
-		overlay.querySelector<HTMLElement>('.monaco-button')?.focus();
+		// Hold focus inside the gate: nothing behind it is actionable. After a
+		// rejected password, land back in the field that needs retyping.
+		const focusTarget = focusPassword
+			? overlay.querySelector<HTMLElement>('.ember-signin-email input[type="password"]')
+			: overlay.querySelector<HTMLElement>('.monaco-button');
+		focusTarget?.focus();
 	}
 
-	private async signIn(providerId: string): Promise<void> {
+	private async run(kind: 'browser' | 'password', signIn: () => Promise<void>): Promise<void> {
 		if (this.busy) {
 			return;
 		}
-		this.busy = true;
+		this.busy = kind;
 		this.error = undefined;
 		this.render();
 
 		try {
-			await this.accountService.signIn(providerId);
+			await signIn();
 			// Success flips the service state, which retires the gate through
 			// update() — nothing to do here.
 		} catch (error) {
@@ -102,9 +112,9 @@ export class EmberSignInGate extends Disposable implements IWorkbenchContributio
 				? error.message
 				: localize('ember.signIn.failed', "Sign-in did not complete. Please try again.");
 		} finally {
-			this.busy = false;
+			this.busy = undefined;
 			if (this.overlay) {
-				this.render();
+				this.render(kind === 'password' && !!this.error);
 			}
 		}
 	}

@@ -11,39 +11,44 @@ import { renderSignInCard } from '../../../contrib/emberAccount/browser/emberSig
 import { ComponentFixtureContext, defineComponentFixture, defineThemedFixtureGroup } from './fixtureUtils.js';
 
 const providers: readonly IEmberAccountProvider[] = [
-	{ id: 'github', label: 'GitHub' },
-	{ id: 'google', label: 'Google' }
+	{ id: 'github', label: 'GitHub' }
 ];
 
 export default defineThemedFixtureGroup({ path: 'emberAccount/' }, {
 	SignInGate: defineComponentFixture({
 		labels: { kind: 'screenshot' },
-		expectedVisualDescriptions: ['A centred card on an opaque ground: the Ember app mark, a "Welcome to Ember" heading, one line of explanatory text, two full-width buttons reading "Continue with GitHub" and "Continue with Google", and a closing hint that a browser window will open.'],
+		expectedVisualDescriptions: ['A centred card on an opaque ground: the Ember app mark, a "Welcome to Ember" heading, one line of explanatory text, a full-width "Continue with GitHub" button, an "or" divider, Email and Password fields above a secondary "Sign in with Email" button, and a closing hint that new accounts are created with GitHub while email sign-in is for existing accounts.'],
 		render: context => renderGate(context, {}),
 	}),
 
 	SignInGateBusy: defineComponentFixture({
 		labels: { kind: 'screenshot' },
-		expectedVisualDescriptions: ['The same card with both provider buttons dimmed and unclickable, and a status line reading that it is waiting for the browser to complete sign-in.'],
-		render: context => renderGate(context, { busy: true }),
+		expectedVisualDescriptions: ['The same card with the GitHub button, both fields and the email button dimmed and unclickable, and a status line reading that it is waiting for the browser to complete sign-in.'],
+		render: context => renderGate(context, { busy: 'browser' }),
+	}),
+
+	SignInGateEmailBusy: defineComponentFixture({
+		labels: { kind: 'screenshot' },
+		expectedVisualDescriptions: ['The same card with the email field prefilled, everything dimmed and unclickable, and a status line reading "Signing in…".'],
+		render: context => renderGate(context, { busy: 'password', email: 'user@example.com' }),
 	}),
 
 	SignInGateError: defineComponentFixture({
 		labels: { kind: 'screenshot' },
-		expectedVisualDescriptions: ['The same card with the buttons active again and, below them, a bordered error box carrying the failure message.'],
-		render: context => renderGate(context, { error: 'Sign-in response did not match the pending request.' }),
+		expectedVisualDescriptions: ['The same card with the email field prefilled, the controls active again and, below them, a bordered error box carrying the failure message.'],
+		render: context => renderGate(context, { email: 'user@example.com', error: 'Invalid login credentials' }),
 	}),
 
-	SignInGateSingleProvider: defineComponentFixture({
+	SignInGateOAuthOnly: defineComponentFixture({
 		labels: { kind: 'screenshot' },
-		expectedVisualDescriptions: ['The same card offering only one button, reading "Continue with GitHub".'],
-		render: context => renderGate(context, { providers: providers.slice(0, 1) }),
+		expectedVisualDescriptions: ['The same card with no divider or email form: only the "Continue with GitHub" button and a closing hint that a browser window will open.'],
+		render: context => renderGate(context, { emailSignIn: false }),
 	}),
 });
 
 function renderGate(
 	context: ComponentFixtureContext,
-	overrides: { busy?: boolean; error?: string; providers?: readonly IEmberAccountProvider[] }
+	overrides: { busy?: 'browser' | 'password'; error?: string; email?: string; emailSignIn?: boolean; providers?: readonly IEmberAccountProvider[] }
 ): void {
 	const gate = dom.append(context.container, dom.$('.ember-signin-gate'));
 	// The real gate is fixed to the viewport; inside a fixture host it must lay
@@ -54,8 +59,11 @@ function renderGate(
 	context.disposableStore.add(renderSignInCard(gate, {
 		productName: 'Ember',
 		providers: overrides.providers ?? providers,
-		busy: overrides.busy ?? false,
+		emailSignIn: overrides.emailSignIn ?? true,
+		email: overrides.email,
+		busy: overrides.busy,
 		error: overrides.error,
-		onSignIn: () => { /* inert in a fixture */ }
+		onSignIn: () => { /* inert in a fixture */ },
+		onEmailSignIn: () => { /* inert in a fixture */ }
 	}));
 }

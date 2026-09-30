@@ -81,6 +81,10 @@ export class EmberAccountService extends Disposable implements IEmberAccountServ
 		return this.configuration?.providers ?? [];
 	}
 
+	get emailSignInEnabled(): boolean {
+		return !!this.configuration?.emailSignIn;
+	}
+
 	/**
 	 * The configured backend with its URL normalized to the project origin, or
 	 * `undefined` when this build ships without accounts.
@@ -181,6 +185,23 @@ export class EmberAccountService extends Disposable implements IEmberAccountServ
 
 		const authCode = await code;
 		await this.redeemAuthCode(authCode, codeVerifier);
+		this.setState(EmberAccountState.SignedIn);
+	}
+
+	async signInWithPassword(email: string, password: string): Promise<void> {
+		if (!this.emailSignInEnabled) {
+			throw new Error('Email sign-in is not enabled for this build.');
+		}
+
+		// A password sign-in wins over any browser flow still waiting.
+		this._pending?.reject(new Error('Superseded by a newer sign-in.'));
+		this._pending = undefined;
+
+		const response = await this.post('/auth/v1/token?grant_type=password', 'emberAccount.signInWithPassword', {
+			email,
+			password
+		});
+		await this.adoptSession(response);
 		this.setState(EmberAccountState.SignedIn);
 	}
 
