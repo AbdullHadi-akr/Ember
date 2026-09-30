@@ -26,10 +26,7 @@ import product from '../../../../../platform/product/common/product.js';
 import { isCompletionsEnabled } from '../../../../../editor/common/services/completionsEnablement.js';
 import { CHAT_SETUP_ACTION_ID } from '../actions/chatActions.js';
 import { IContextKeyService } from '../../../../../platform/contextkey/common/contextkey.js';
-import { isWeb } from '../../../../../base/common/platform.js';
-import { InEditorZenModeContext } from '../../../../common/contextkeys.js';
 import { UpdateTitleBarEditorVisibleContext } from '../../../update/common/update.js';
-import { ChatConfiguration } from '../../common/constants.js';
 
 /**
  * Tracks whether Copilot is currently blocked by a reached quota limit, has
@@ -196,7 +193,7 @@ export class ChatStatusBarEntry extends Disposable implements IWorkbenchContribu
 		this._register(this.editorService.onDidActiveEditorChange(() => this.onDidActiveEditorChange()));
 
 		this._register(this.configurationService.onDidChangeConfiguration(e => {
-			if (e.affectsConfiguration(product.defaultChatAgent?.completionsEnablementSetting) || e.affectsConfiguration(ChatConfiguration.TitleBarSignInEnabled)) {
+			if (e.affectsConfiguration(product.defaultChatAgent?.completionsEnablementSetting)) {
 				this.update();
 			}
 		}));
@@ -393,44 +390,15 @@ export class ChatStatusBarEntry extends Disposable implements IWorkbenchContribu
 	}
 
 	private getSetupEntryProps(): IStatusbarEntry {
-		const showSignInLabel = !this.isSignInTitleBarAffordanceVisible();
-		const signInLabel = localize('signIn', "Sign In");
 		return {
 			name: localize('chatStatus', "Copilot Status"),
-			text: showSignInLabel ? `$(copilot) ${signInLabel}` : '$(copilot)',
-			ariaLabel: showSignInLabel ? signInLabel : localize('chatStatusAria', "Copilot status"),
+			text: '$(copilot)',
+			ariaLabel: localize('chatStatusAria', "Copilot status"),
 			command: CHAT_SETUP_ACTION_ID,
 			showInAllWindows: true,
 			kind: undefined,
 			content: this.entryAnchor,
 		};
-	}
-
-	private isSignInTitleBarAffordanceVisible(): boolean {
-		if (isWeb) {
-			return false;
-		}
-
-		// Title bar sign-in button only shows when user is signed out
-		if (this.chatEntitlementService.entitlement !== ChatEntitlement.Unknown) {
-			return false;
-		}
-
-		if (this.chatEntitlementService.sentiment.hidden || this.chatEntitlementService.sentiment.disabledInWorkspace) {
-			return false;
-		}
-
-		if (this.contextKeyService.contextMatchesRules(UpdateTitleBarEditorVisibleContext)) {
-			return false;
-		}
-
-		const inZenMode = Boolean(this.contextKeyService.getContextKeyValue(InEditorZenModeContext.key));
-		if (inZenMode) {
-			return false;
-		}
-
-		const signInTitleBarEnabled = this.configurationService.getValue<boolean>(ChatConfiguration.TitleBarSignInEnabled) !== false;
-		return signInTitleBarEnabled;
 	}
 
 	override dispose(): void {
